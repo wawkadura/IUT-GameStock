@@ -1,0 +1,180 @@
+html{
+   font: 1.1em sans-serif;
+}
+
+#hautpage {
+    text-align: right;
+    background: #141414;
+}
+
+#hautpage .titre {
+   height: 88px;
+}
+
+.titre{
+   width: 1036px;
+   margin: 0 auto;
+   position: relative;
+}
+
+#logo {
+    width: 243px;
+    height: 63px;
+    background:
+    background-size: auto;
+    background-size: 100%;
+    cursor: pointer;
+    margin-top: 13px;
+    position: absolute;
+    left: 0;
+    transition: all .2s;
+}
+
+a {
+    color: #ff5400;
+    text-decoration: none;
+    outline: 0;
+}
+
+#rechercher{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 24px;
+}
+
+#boiterecherche{
+    height: 30px;
+    background: 0 0;
+    color: lime;
+    border: 0;
+    border-bottom-color: lime;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-bottom: 2px solid lime;
+    outline: 0;
+    font-size: 20px;
+    width: 220px;
+    border-radius: 0;
+    position: relative;
+    top: -5px;
+}
+
+#boutonrecherche{
+    height: 35px;
+    background: 0 0;
+    color: lime;
+    border: 2px solid lime;
+    outline: 0;
+    font-size: 20px;
+    width: 50px;
+    border-radius: 0;
+    position: relative;
+    top: -5px;
+}
+
+input{
+    font-family: proxima-nova,arial,sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+ul{
+    display: table;
+    width: 1200px;
+    margin: 100px auto;
+    padding: 0;
+}
+
+ul li{
+    display: table-cell;
+}
+
+ul{
+    background: lime;
+}
+
+ul{
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+                0 3px 5px rgba(0, 0, 0, .2),
+                0 5px 10px rgba(0, 0, 0, .2),
+                0 20px 20px rgba(0, 0, 0, .15);
+}
+
+ul li a{
+    display: block;
+    text-align: center;
+    color: rgba(0, 0, 0, .7);
+    text-decoration: none;
+    padding: 8px 8px 17px 8px;
+}
+
+ul li a{
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
+}
+
+ul li:first-child a{
+    border-radius: 3px 0 0 3px;
+}
+
+ul li:last-child a{
+    border-radius: 0 3px 3px 0;
+}
+
+ul li a:active{
+    background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.1));
+    box-shadow: 0 0 2px rgba(0,0,0,.3) inset;
+}
+
+ul li a:hover,
+ul li a:focus{
+    padding: 8px 25px 17px 25px;
+}
+
+ul li a{
+    transition: padding .3s;
+}
+
+ul li a{
+    transition: all .3s;
+}
+
+ul li a{
+    transition: all .3s .1s;
+}
+
+ul li a:hover,
+ul li a:focus{
+    transition: all .3s 0s;
+}
+
+ul li a{
+    position: relative;
+}
+
+ul li a::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 9px;
+    margin-left: -2px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .5);
+}
+
+ul li a:hover::before,
+ul li a:focus::before{
+    background: white;
+    box-shadow: 0 0 2px white,
+                0 -1px 0 rgba(0, 0, 0, .4);
+}
