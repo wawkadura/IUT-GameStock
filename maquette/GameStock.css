@@ -70,19 +70,54 @@ a {
     border-radius: 0;
     position: relative;
     top: -5px;
+    background-image: url("data/loupe.png");
+    background-repeat: no-repeat;
+}
+
+#boutonrecherche:hover{
+    background: lime;
+}
+
+#textseconnecter, #textsinscrire{
+    color: lime;
+    font-size: 20px;
+    font-family: Arial Black;
+
+}
+
+#textseconnecter:hover{
+    color: lime;
+    font-size: 22px;
+    font-family: Arial Black;
+
+}
+
+#textsinscrire:hover{
+    color: lime;
+    font-size: 22px;
+    font-family: Arial Black;
+
 }
 
 input{
     font-family: proxima-nova,arial,sans-serif;
 }
 
+#bandegauche {
+    position: absolute;
+    align-content: center;
+    background: #141414;
+}
 
+#bandedroite {
 
+    background: #141414;
+}
 
+#bandemilieu {
 
-
-
-
+    background: #141414;
+}
 
 
 
