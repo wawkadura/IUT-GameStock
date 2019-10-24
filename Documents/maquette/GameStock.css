@@ -1,10 +1,15 @@
 html{
    font: 1.1em sans-serif;
+
+}
+
+body{
+  background-image:url("data/fondecran.jpg");
 }
 
 #hautpage {
     text-align: right;
-    background: #141414;
+    opacity: 1;
 }
 
 #hautpage .titre {
@@ -52,30 +57,76 @@ a {
     border-bottom-width: 0px;
     border-bottom: 2px solid lime;
     outline: 0;
-    font-size: 20px;
+    font-size: 24px;
     width: 220px;
     border-radius: 0;
     position: relative;
     top: -5px;
+    transition-duration: 300ms;
+    -moz-transition-duration: 300ms;
+    -webkit-transition-duration: 300ms;
+}
+
+#boiterecherche:hover{
+  height: 38px;
+  background: 0 0;
+  color: lime;
+  border: 0;
+  border-bottom-color: lime;
+  border-bottom-style: none;
+  border-bottom-width: 0px;
+  border-bottom: 2px solid lime;
+  outline: 0;
+  font-size: 24px;
+  width: 234px;
+  border-radius: 0;
+  position: relative;
+  top: -1px;
+  transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -webkit-transition-duration: 300ms;
 }
 
 #boutonrecherche{
-    height: 35px;
-    background: 0 0;
-    color: lime;
-    border: 2px solid lime;
-    outline: 0;
-    font-size: 20px;
-    width: 50px;
-    border-radius: 0;
-    position: relative;
-    top: -5px;
-    background-image: url("data/loupe.png");
-    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+    background: url("data/loupe.png") 15px 14px no-repeat;
+    background-size: auto;
+    background-size: 23px;
+    border: 0;
+    color:lime;
+    font-weight: 700;
+    cursor: pointer;
+    -moz-border-radius: 0 5px 5px 0;
+    -webkit-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
+    text-shadow: 1px 1px lime;
+    font-size: 10px;
+    vertical-align: bottom;
+    transition-duration: 300ms;
+    -moz-transition-duration: 300ms;
+    -webkit-transition-duration: 300ms;
 }
 
 #boutonrecherche:hover{
-    background: lime;
+  width: 50px;
+  height: 50px;
+  background: url("data/loupe.png") 21px 20px no-repeat;
+  background-size: auto;
+  background-size: 23px;
+  border: 0;
+  color:lime;
+  font-weight: 700;
+  cursor: pointer;
+  -moz-border-radius: 0 5px 5px 0;
+  -webkit-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+  text-shadow: 1px 1px lime;
+  font-size: 10px;
+  vertical-align: bottom;
+  transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -webkit-transition-duration: 300ms;
 }
 
 #textseconnecter, #textsinscrire{
@@ -121,9 +172,10 @@ input{
 
 
 
+
 ul{
     display: table;
-    width: 1200px;
+    width: 1400px;
     margin: 100px auto;
     padding: 0;
 }
@@ -133,27 +185,25 @@ ul li{
 }
 
 ul{
-    background: lime;
+    background: rgba(0,255,0,0) ;
 }
 
 ul{
     border-radius: 3px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
-                0 3px 5px rgba(0, 0, 0, .2),
-                0 5px 10px rgba(0, 0, 0, .2),
-                0 20px 20px rgba(0, 0, 0, .15);
+
 }
 
 ul li a{
     display: block;
     text-align: center;
-    color: rgba(0, 0, 0, .7);
+    color: rgba(0, 255, 0, .9);
+    font-weight: bold;
     text-decoration: none;
     padding: 8px 8px 17px 8px;
 }
 
 ul li a{
-    text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .1);
 }
 
 ul li:first-child a{
@@ -162,11 +212,6 @@ ul li:first-child a{
 
 ul li:last-child a{
     border-radius: 0 3px 3px 0;
-}
-
-ul li a:active{
-    background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.1));
-    box-shadow: 0 0 2px rgba(0,0,0,.3) inset;
 }
 
 ul li a:hover,
@@ -204,12 +249,30 @@ ul li a::before{
     width: 4px;
     height: 4px;
     border-radius: 50%;
-    background: rgba(0, 0, 0, .5);
 }
 
 ul li a:hover::before,
 ul li a:focus::before{
     background: white;
-    box-shadow: 0 0 2px white,
-                0 -1px 0 rgba(0, 0, 0, .4);
+}
+
+.dropdown-child {
+display: none;
+background-color: rgba(0,255,0,0);
+min-width: 50px;
+position: absolute;
+width: 100%;
+color: lime;
+}
+.dropdown-child a {
+padding: 20px;
+text-decoration: none;
+display: inline-block;
+}
+.dropdown:hover .dropdown-child {
+display: block;
+position: relative;
+top: -100px;
+
+
 }
