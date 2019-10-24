@@ -1,0 +1,216 @@
+body{
+   /*la marge qui est au tour de toute la page */
+  font-family: arial ; /*changer le style d'ecriture*/
+  font-size: 0.9em; /*changer la taille de l'ecriture*/
+  background-image: url("background_image.jpg"); /*definie l'arrier plan avec une photo */
+  background-attachment: fixed; /*permet de pas faire bouger le fond d'ecran lorsqu'on scoll la page*/
+}
+header {
+  color: black; /*couleur de "Resumer M1105"*/
+  background-color: #cc0000; /*couleur de de la barre Resumer M1105*/
+  display: flex; /*mettre l'affichage en flex*/
+  justify-content: center; /*elle permet de mettre "Resumer M1105" au milieu */
+  border: 5px solid black  ; /*elle crée la bordure bleu autour de Resumer M1105*/
+  border-radius: 50px ; /*elle a permis d'arondire les bord*/
+
+
+}
+#Global {
+  margin-left:50px ;
+  margin-right : 50px;
+  display: flex;  /*mettre l'affichage en flex*/
+  background-color: white;
+  flex: auto;
+}
+article {
+  padding-left: 3em;
+  padding-right: 3em;
+  flex: 1 100%;  /*se qui permet de faire remplir les collonne de titre*/
+  border: 1px solid black; /*elle permet de mettre les bordure*/
+  flex-direction: column; /*permet de mettre les elements en vertical*/
+  background-color: white;
+  display: flex;
+  flex-wrap: nowrap;
+
+}
+h2 {
+  font-size: 4em;
+ margin-top: 10px;
+ margin-bottom: 20px;
+}
+h3 {
+  background-color: teal;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 20px ;
+  color: white;
+}
+h4 {
+  text-decoration: underline;
+  font-size: 1.1em;
+}
+img{
+  border: 1px solid black;
+  border-radius: 20px ;
+}
+fieldset{
+  background-color: gray;
+
+}
+label{
+width: auto;
+font-weight: bold;
+}
+input{
+
+border: 1px solid black;
+right: 50px;
+}
+/*--------------------------------HTML----------------------------------------------*/
+#HTML{
+  background-color: #ff9966;
+  list-style: circle; /*definie le style de la liste */
+  }
+  #HTML h2 {
+    text-align: center;
+  }
+  #HTMLDef{
+    display: flex;
+    text-align: center;
+  }
+  #HTML table , th ,td {       /*les "," est la pour additionner les elements*/
+    border: 2px solid grey;
+    height: 50px; /*reglee la taille du tableau*/
+    text-align: center; /* centre les elements */
+    border-collapse: collapse; /*fusion des bordures*/
+  }
+  #HTML th {
+    background-color: #9999ff;
+  }
+  #HTML td {
+    background-color: #e6e6e6;
+  }
+  #HTML ul {
+    list-style: circle; /*definie le style de la liste */
+  }
+/*------------------------------CSS------------------------------------------------*/
+#CSS{
+  background-color: #ffff66;
+  }
+  #CSS h2 {
+    text-align: center;
+  }
+  #CSS ul{
+    list-style-type: circle;
+  }
+  #serif-times{
+    font-family:  serif;
+  }
+  #sans-serif-Arial {
+    font-family:  verdana;
+  }
+  #couleurs  {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    flex:auto;
+    width: 100%;
+    height: 100%;
+
+  }
+  #Exemple_Inline-block h3,#Exemple_Inline-block h4,#Exemple_Inline-block h6 {
+  display: inline-block;
+  margin: 0px ;
+  border: 1px solid black;
+  background-color: white;
+  }
+/*------------------------------PHP------------------------------------------------*/
+#PHP{
+  background-color: #339966;
+  }
+
+  #PHP h2 {
+    text-align: center;
+  }
+/*------------------------------pied de page------------------------------------------------*/
+
+footer {
+  padding: 3em;
+  background-color: #cccccc ;
+  display: flex;
+  margin-left:50px ;
+  margin-right : 50px;
+  flex: auto;
+  border: 1px solid black;
+  flex-direction: column;
+
+  }
+  #definitions {
+    display: flex;
+    flex-direction: column;
+  }
+  #GD , #GD2 {
+    display: flex;
+    flex-direction: row;
+    }
+  #definitions div div {
+    border: 1px solid black;
+    flex-wrap: nowrap;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+  }
+  #definitions h4{
+    display: flex;
+    justify-content: center;
+    flex: auto;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: blue ;
+  }
+/*------------------------------Responsive Web Design------------------------------------------------*/
+@media screen and (max-width:1400px) {
+img {
+width: 100%;
+height: auto;
+
+}
+#img1 {
+  width: 80%;
+height:100%;
+
+}
+#img2{
+  width: 20%;
+height:100%;
+}
+}
+@media screen and (max-width:1165px)  {
+  header{
+    width: 1100px;
+  }
+  footer{
+    width: 1100px;
+  }
+}
+@media screen and (max-width:1130px)  {
+  #GD2 , #GD {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width:900px)  {
+  #Global {
+ flex-wrap:  wrap;
+ flex-direction: column;
+  }
+  header{
+    width: auto;
+  }
+  footer {
+    width: auto;
+  }
+  article{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="Resume_M1105.css"> <!--liaison entre le fichier html et le fichier css -->
+    <link rel="icon" type="image/jpg" href="background_image.jpg">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>RESUME M1105</title>     <!-- titre de la page (l'onglet) -->
+
+  </head>
+  <body>
+    <header >
+        <h1>Résumer M1105 : </h1>
+    </header>
+    <div id="Global">
+      <!--________________________________HTML__________________________________________________ -->
+      <article id="HTML">
+        <h2>HTML</h2>
+          <p id="HTMLDef"><strong>HTML : </strong> <strong>H</strong>yper<strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage</p>
+        <h3>Structure :</h3>
+          <ul>
+            <li> <strong>body :</strong> la racine des divisions</li>
+            <li><strong>nav :</strong> division pour les liens de navigation (le menu)</li>
+            <li><strong>section :</strong> division générique regroupant un même sujet</li>
+            <li><strong>article :</strong> division de contenu indépendant</li>
+            <li><strong>aside :</strong> division dont le contenu est un complément par rapport à ce qui l'entoure</li>
+            <li><strong>header :</strong> introduction du document entier (en-tête de page) ou d'une section, d'un article,…</li>
+            <li><strong>footer :</strong> conclusion du document entier (pied de page), ou d'une section, d'un article,… </li>
+            <li><strong>div :</strong> pour regrouper des éléments </li>
+            <li><strong>span :</strong> pour regrouper certains types d'éléments, comme des mots</li>
+          </ul>
+        <h3>Texte:</h3>
+          <ul>
+            <li><strong>h1 :</strong> pur titre</li> <!-- plusieurs forma : h1,h2,h3,h4,h5,h6-->
+            <li><strong>p :</strong> pour paragraphe</li>
+            <li><strong>br : </strong>retour a la ligne</li>
+            <li><strong>a :</strong> <a href="http://google.com/" title="site google"> lien internet</a></li> <!-- a: lien externe(google.com) ,lien local(M1105/tp5/PAGE.html) , lien interne (dans la page ex pour un h1 id=haut :href"#haut") -->
+            <li><strong>hr :</strong> ligne horizontale </li>
+            <li><strong>cite :</strong> <cite>pour faire une citation</cite> </li>
+            <li><strong>blockquote : </strong>pour faire un bloc de citation </li>
+            <li><strong>li : </strong>liste (doit etre acompagnier de ul ou ol... ) </li>
+            <li><strong>ol : </strong> liste ordonnée (avec numero) </li>
+            <li><strong>ul : </strong>liste a puces(comme celle-ci) </li>
+            <li><strong>dl :</strong> liste de definitions </li>
+            <li><strong>dt :</strong> le mots a definire</li>
+            <li><strong>dd :</strong> la definition du mot </li>
+            <li><strong>em :</strong> emphase </li>
+            <li><strong>strong :</strong> emphase fort </li>
+          </ul>
+        <!-- exemple de dl/dt/dd
+          <dl>
+          <dt>wesh</dt>
+          <dd>une frome de salutation </dd>
+          </dl> -->
+        <h3>Tableau (table) : </h3>
+          <ul>
+            <li><strong>caption :</strong> legende du tableau</li>
+            <li><strong>tr : </strong>crée une ligne de tableau</li>
+            <li><strong>th :</strong> titre d'une collonne</li>
+            <li><strong>td :</strong> elements d'une collonne</li>
+          </ul>
+          <br>
+          <table>
+            <caption>voici un tableau</caption>
+            <tr> <th>titre 1</th> <th>titre2</th> </tr>
+            <tr> <td>truc 1 </td> <td>bla1</td> </tr>
+            <tr> <td>truc2 </td> <td>bla2</td> </tr>
+          </table>
+        <h3>Contenu media (img/audio/video) : </h3>
+          <h4>Images : </h4>
+          <ul>
+            <li><strong>map :</strong> zone clickable </li>
+            <li><strong>area :</strong> utiliser avec map pour selectionner les emplacement clickable</li>
+            <li><strong>shape = </strong>"rect"(les 4 coins) et "circle" (abscisses, ordonnée,rayon)  </li>
+            <li><strong>coords = </strong>les coordonnées </li>
+              <!-- Exemple de map/area
+                <img src="planets.gif" alt="planets” usemap="#planetmap” />
+                  <map name="planetmap">
+                  <area shape="rect" coords="0,0,82,126" href="sun.html" alt="Sun” />
+                  <area shape="circle" coords="90,58,3" href="mercury.html" alt="Mercury” />
+                  <area shape="circle" coords="124,58,8" href="venus.html" alt="Venus” />
+                </map> -->
+            <li><strong>figure :</strong> ilustration de quelque chose </li>
+            <li><strong>figcaption :</strong> ecrire l'ilustration</li>
+            <!-- exemple de figure/figcaption
+              <figure>
+                <img src="TimVin.png" alt="Vin et Tim: les inventeurs d'internet et du web"
+                title="Tim et Vin" />
+                <figcaption>Qui est Tim? Qui est Vin?</figcaption>
+              </figure> -->
+            <li><strong>picture:</strong> images adaptatives permet de charger differents images selon la taille de l'ecran</li>
+            <!-- exemple de picture
+              <picture>
+                <source media="(min-width: 650px)" srcset="TimVin2.png">
+                <source media="(min-width: 460px)" srcset="TimVin1.png">
+                <img src="TimVin.png" alt="Tim et Vin">
+              </picture> -->
+            <li><strong>scr =</strong> URL de l'image </li>
+            <li><strong>alt =</strong> texte alternatif, à afficher si l’ image ne peut pas l’être</li>
+            <li><strong>title =</strong> bulle d’aide</li>
+            <li><strong>width, height =</strong> dimensions</li>
+              <!-- Exemple scr/alt/titre/width
+                <img src= "images/iut.jpg" alt="IUT" title="logo IUT" width="150" height="90" > -->
+            <li><strong>srcset = </strong>changer l'image pour quelle convient a l'ecran</li>
+              <!--Exemple srcset
+                srcset="tim-vin-1.jpg 280w, tim-vin-2.jpg 440w,tim-vin-3.jpg 800w" -->
+            <li><strong>sizes =</strong> affcihe l'image que sur la taille indiquer</li>
+              <!-- Exemple : sizes="100vw" -->
+          </ul>
+          <h4>Audios/Videos : </h4>
+            <ul>
+              <li><strong>controls =</strong> c'est pour controler la lecture audio/video</li>
+              <li><strong>loop = </strong>le relancement de du fichier audio </li>
+              <li><strong>type =</strong> le format de la video/audio </li>
+              <li><strong>src =</strong> l'emplacement de la video/audio </li>
+              <!-- Exemple audios/video
+            <audio controls="controls" loop= "loop">
+              <source src="maChanson.mp3" type="audio/mpeg" />
+              <source src="maChanson.ogg" type="audio/ogg" />
+              ici l’alternatif, un message, par exemple.
+            </audio>
+            <video width="400" height="222" controls="controls">
+              <source src= "maVideo.mp4" type="video/mp4" />
+              <source src= "maVideo.ogv" type="video/ogg" />
+              ici l’alternatif, un message, par exemple.
+            </video> -->
+          </ul>
+        <!-- l'elements image se comporte comme un mot dans un paragraphe -->
+        <h3>Formulaire : </h3>
+          <h4>Zone de saisie de texte : </h4>
+            <ul>
+                <li><strong>form :</strong> zone de saisie (obligatoire pour faire formulaire)</li>
+                <li><strong>methode= </strong> définit la méthode à employer pour transmettre au serveur l'information recueillie dans les champs du formulaire ("post"| "get") </li>
+                <li><strong> action= </strong> ou on mettra un programme externe (PHP) qui va traiter les information (ex:"traite.php")</li>
+                <li> <strong>fieldset :</strong> ensemble regroupent les zones de texte </li>
+                <li> <strong>legend : </strong> le titre du fieldset </li>
+                <li> <strong>label : </strong> le titre des zones de texte (ex : "nom/prenom:") </li>
+                <li><strong>input : </strong>on definie une valeur entrant </li>
+                <li><strong>type="text" : </strong> la forme de la valeur entant sera un text </li>
+                <li> <strong>type="reset" :</strong>elle permet de cree un bouton "reset" </li>
+                <li><strong>type="submit" :</strong>elle permet de cree un bouton "submit" </li>
+                <li><strong>name= </strong>attribue permetent de stocker la valeur entre dans une varable de type name ex("nm") </li>
+                <li><strong></strong> </li>
+            </ul>
+
+              <p > <strong>Exemple 1 : </strong>zone de texte </p>
+                <form method= "get" action="Resume_M1105.php">
+                  <fieldset>
+                    <legend>Vos coordonnées:</legend>
+                    <label>Votre nom: </label>
+                    <input type="text" name="nm" id="wesh" />
+                    <br />
+                    <label for="prenom">Votre prénom: </label>
+                    <input type="text" name="pn" id="prenom" />
+                    <br />
+                  </fieldset>
+                  <p>
+                    <input type="submit" value= "Envoyez" />
+                    <input type="reset" value="clear" />
+                  </p>
+                </form>
+                <ul>
+                  <li><strong>datalist : </strong>permet de cree une list de mots qui a faire une Auto-complétion ou une auto-suggestion </li>
+                  <li><strong>list=</strong>attribue a mettre avec la balise input pour selectionner la datalist faite (ex:"IdList")</li>
+                  <li><strong>option : </strong> balise qui contiendra les options pour la datalist</li>
+                  <li><strong>value= </strong> attribue permetent de definir les differents options de la datalist </li>
+                </ul>
+              <p > <strong>Exemple 2:</strong> datalist </p>
+              <form action="index.html" method="get">
+                <fieldset>
+                  <label for="browsers">Votre navigateur préféré: </label>
+                  <input type="text" name="br" id="browsers" list="listBr" >
+                  <datalist id="listBr">
+                        <option value="Internet Explorer">
+                        <option value="Firefox">
+                        <option value="Chrome">
+                        <option value="Opera">
+                        <option value="Safari">
+                  </datalist>
+                </fieldset>
+              </form>
+              <p> <strong> Exemple 3:</strong> autre type possible pour input ("password"|"email"|"url"|"tel")  </p>
+              <form action="index.html" method="get">
+                <fieldset>
+                  <label> Mot de passe :</label>
+                  <input type="password" name="pwd"> <br>
+                  <label> Email :</label>
+                  <input type="email" name="email" ><br>
+                  <label> URL :</label>
+                  <input type="url" name="url" ><br>
+                  <label> Telephone :</label>
+                  <input type="tel" name="tel" ><br>
+                    <label> Date :</label>
+                    <input type="date" name="date" ><br>
+                </fieldset>
+              </form>
+          <h4>Les choix : </h4>
+            <ul>
+              <li><strong>type="radio": </strong> cree des boutons permetent de faire qu'un choix </li>
+              <li><strong>value= : </strong> c'est la valuer qui correspond a le choix selectionner </li>
+              <li><strong>name="laMeme"</strong> en mettent la meme chose dans l'atribue name des balise input une seul valuer va etre pris en compte  </li>
+            </ul>
+            <p> <strong>Exemple 1 : </strong>une seul solution ("radio") : </p>
+              <form action="index.html" method="get">
+                <fieldset>
+                  <legend>Votre fruit préféré:</legend>
+                  <input type="radio" name="choix" value="pomme" id="pom" />
+                  <label for="pom">Les pommes ? </label>
+                  <br />
+                  <input type="radio" name="choix" value="poire" id="poi" />
+                  <label for="poi">Les poires ? </label>
+                  <br />
+                  <input type="radio" name="choix" value="peche" id="pec" />
+                  <label for="pec">Les pêches ? </label>
+                  <br />
+                </fieldset>
+              </form>
+              <ul>
+                <li><strong>type="checkbox" : </strong>cases a cocher pour les choix multiplie (pas la peine de "value=") </li>
+              </ul>
+              <p> <strong>Exemple 2 : </strong> choix multiplie ("checkbox") : </p>
+                <form action="index.html" method="get">
+                  <fieldset>
+                    <legend>Vos villes préférées: (plusieurs choix possibles) :</legend>
+                    <input type="checkbox" name="gre" id="grenoble" />
+                    <label for="grenoble">Grenoble</label>
+                    <br />
+                    <input type="checkbox" name="par" id="paris" />
+                    <label for="paris">Paris</label>
+                    <br />
+                    <input type="checkbox" name="bre" id="brest" />
+                    <label for="brest">Brest</label>
+                  </fieldset>
+                </form>
+            <ul>
+              <li><strong>select : </strong> cree une liste droulante permetent de choisir les options proposer </li>
+              <li><strong>optgroup : </strong>pour cree des categories differets dans la liste deroulante </li>
+            </ul>
+            <p> <strong>Exemple 3 : </strong> liste deroulante (select | optgroup) : </p>
+            <form action="index.html" method="get">
+              <fieldset>
+                <legend>Que préférez-vous ?</legend>
+                <select name="animal">
+                  <optgroup label="Chien">
+                    <option value="labrador">Labrador</option>
+                    <option value="boxer">Boxer</option>
+                    <option value="berger">Berger allemand</option>
+                  </optgroup>
+                  <optgroup label="Chat">
+                    <option value="persan">Persan</option>
+                    <option value="siamois">Siamois</option>
+                  </optgroup>
+                </select>
+              </fieldset>
+            </form>
+          <h4>Autres attribue/type  : </h4>
+            <ul>
+              <li><strong>nombreux types pour input :</strong>
+                button, checkbox, color, date, datetime,
+                datetime-local, email, file, hidden, image, month,
+                number, password, radio, range, reset, search,
+                submit, tel, text, time, url, week </li>
+                <li><strong>nombreux attributs pour form et input :</strong> <br>
+                <strong>form: </strong>autocomplete, novalidate <br>
+                <strong>input : </strong>autofocus, autocomplete, checked, list, min, max,
+                multiple, placeholder, required, size, step,... </li>
+            </ul>
+      </article>
+      <!--________________________________CSS__________________________________________________ -->
+      <article id="CSS">
+        <h2>CSS</h2>
+            <p id="CSSDef"><strong>CSS : </strong> <strong>C</strong>ascading<strong>S</strong>tyle <strong>S</strong>heets </p>
+            <h3>Les differents maniere pour appliquer un style : </h3>
+              <ul>
+                <li><strong>balise1, balise2 :</strong> appliquer le style sur les 2 balise </li>
+                <li> <strong>balise1 balise2 :</strong> appliquer le style sur tous les elements de la balise2 qui se situe a l'interieur de la balise1</li>
+                <li> <strong>balise1 >balise2 :</strong> le style est appliquer sur tous les elements des balise2 qui a pour parent une balise1</li>
+                <li> <strong>balise1 + balise2 :</strong> le style est appliquer sur tous les elements des balise2 qui suivent immediatement des balise1</li>
+                <li> <strong>#balise1 :</strong> le style est appliquer sur tous les elements de la balise ayant comme identifiant "balise1"</li>
+                <li> <strong>.nomclass :</strong> le style est appliquee sur tous les elements des balise ayant comme class "nomclass" </li>
+                <li> <strong>balise1.nomclass :</strong> le style est appliquer sur tous les elements des balise1 qui on pour class "nomclass"</li>
+                <li> <strong>selecteur :</strong> outils en plus pour simplifier la selections de balise pour l'application de style <a href="https://www.w3schools.com/cssref/css_selectors.asp">liste des selecteur</a> </li>
+              </ul>
+            <h3>Proprietes de mise en forme :</h3>
+              <img src="proprieter_de_mis_en_forme_du_texte.PNG" alt="" height="300" width= 600>
+              <h4>Polices de caracteres : </h4>
+              <dl>
+                <dt>2 grande familles :  </dt>     <!-- !!!dt et dd doit etre obligatoirement a l'interieur de dl -->
+                  <dd>Serif : Times, Times New Roman, Book Antiqua,…</dd>
+                  <dd>Sans serif : Arial, Verdana, Helvetica,…</dd>
+                <dt>Exemples :</dt>
+                  <dd id="serif-times">Ce texte est écrit avec une police serif (times)</dd>
+                  <dd id="sans-serif-Arial">Ce texte est écrit avec une police sans-serif (Verdana)</dd>
+              </dl>
+
+             <h4>Tailles de la polices : </h4>
+                  <ul>
+                    <li><strong>px :</strong> pixels notation classique  </li>
+                    <li><strong>em :</strong> valeur qui multiplie la taille inisiale du texte (1em = 1 px = 100%)  </li>
+                    <li><strong>pourcentage % :</strong> permet de redimensionner du texte</li>
+                    <li><strong>vw :</strong> viewport utiliser pour les tablette et smartphone  </li>
+                    <li><strong>cm/mm/pt/pc/in :</strong> uniquement reserver a l'impression papier </li>
+                  </ul>
+            <h3>Proprietes de couleurs et de fond : </h3>
+              <div id="couleurs">
+                <img id="img1" src="proprieter_de_couleur_et_de_fond.PNG" alt="proprieter de couleur et de fond" height="300" width= "500">
+                <img id="img2" src="couleurs.PNG" alt="couleurs" height="300" width= "100">
+              </div>
+            <h3>Proprietes listes : </h3>
+              <img src="proprieter_listes.PNG" alt="proprieter listes" height="200" width= 600>
+            <h3>Proprietes de tableau : </h3>
+              <img src="proprieter_tableau.PNG" alt="proprieter tableau" height="100" width= 600>
+            <h3>Proprietes sur les liens : </h3>
+              <ul>
+                <li><strong>a:link :</strong>Apparence du lien par défaut </li>
+                <li><strong>a:visited :</strong> Apparence du lien lorsque la page a déjà été visitée</li>
+                <li><strong>a:hover :</strong> Apparence du lien lorsqu’on pointe dessus </li>
+                <li><strong>a:active :</strong> Apparence du lien lors du clic de la souris </li>
+                 <!-- Exemples
+                  a:link {color: red; text-decoration: none; }
+                  a:visited {color: green; text-decoration: none; }
+                  a:hover {font-style: italic; background-color: yellow; }
+                  a:active {color: blue; } -->
+              </ul>
+            <h3>Proprietes des boites : </h3>
+              <img src="proprieter_boites.png" alt="proprieter_boites" height="300" width="600">
+              <img src="proprieter_boites2.png" alt="proprieter_boites2" height="350" width="600">
+            <h3>Proprietes de positionnement et d'affichage des boites:</h3>
+              <img src="proprieter_positionnement.png" alt="proprieter_positionnement" height="350" width="600">
+              <h4>7 categories de positionnement : </h4>
+              <ul>
+                <li><strong>flux : </strong> c'est losque aucun positionnement est selectionner</li>
+                <li> <strong>inline-block : </strong> Les éléments de type inline-block se positionnent les uns à côté des autres</li>
+                </ul>
+                    <div id="Exemple_Inline-block">
+                      <h6>wesh</h6> <h4>wesh</h4> <h3>wesh</h3>
+                    </div>
+                <ul>
+                <li><strong>flexbox : </strong> le modèle de boîte flexible </li>
+                </ul>
+                  <ol>
+                    <li><strong>flex-direction :</strong> définit la direction de l’axe principal du conteneur flex (row | row-reverse | column | column-reverse) </li>
+                    <li><strong>flex-wrap :</strong>  la façon dont les éléments-flex vont s'agencer selon la taille de la fenêtre (nowrap | wrap | wrap-reverse)</li>
+                    <li><strong>justify-content :  </strong>  contrôle l'alignement de tous les éléments-flex sur l'axe principal (flex-start | flex-end | center | space-between | spacearound)</li>
+                    <li><strong>align-items :  </strong> contrôle l'alignement de tous les éléments-flex sur l'axe secondaire (stretch | flex-start | flex-end | center | baseline)</li>
+                    <li><strong>align-content : </strong> Similaire à align-items mais au lieu d'aligner les élementsflex, aligne les lignes (normal | stretch | flex-start | flex-end | center | spacebetween space-around | baseline |) </li>
+                    <li><strong>align-self :  </strong> contrôle l'alignement d'un élément-flex particulier le long de l'axe secondaire (stretch | flex-start | flex-end | center | baseline) </li>
+                    <li><strong>order : </strong> Pour cibler des éléments-flex en particulier et modifier leur ordre de visualisation (1|2|3..)</li>
+                    <li><strong>flex : </strong> Contrôle la taille des éléments-flex le long de l'axe principal (‘flex-grow’ || ‘flex-shrink’ || ‘flex-basis’) ex: 0 1 auto <br>
+                      <strong> flex-grow :</strong> proportion de l'espace libre peut-on allouer en supplément à l'élément-flex   <br>
+                      <strong> flex-shrink :</strong> proportion de l'espace peut être retirée à l'élément-flex <br>
+                      <strong> flex-basis : </strong> la taille de l'élément-flex avant tout agrandissement/réduction </li>
+                  </ol>
+              <ul>
+                <li><strong>relative :  </strong>positionnement relative (ex: position:relative ) il faut preciser top,bottom,left,right </li>
+                <li><strong>absolue :</strong>  positionnement absolue (ex: position:absolue ) il faut preciser top,bottom,left,right  </li>
+                <li><strong>fixed : </strong>  positionnement fixed (ex: position:fixed ) il faut preciser top,bottom,left,right </li>
+                <li><strong>float : </strong> positionnement float (ex: position:float ) il faut preciser left,right et on utilise (clear:left (ou right)) pour arreter le float</li>
+              </ul>
+            <h3>Responsive Web Design :</h3>
+              <h4>balise meta :</h4>
+                <p> meta name="viewport" content="initial-scale=1, width=device-width" </p>
+                <ul>
+                  <li><strong>width:</strong>adapte le "width" (largeur) de la fenêtre du
+                    navigateur (= le viewport) à la largeur du "device" c'està-
+                    dire la largeur du terminal exprimée en dp) </li>
+                  <li><strong>initial-scale:</strong> fixe le niveau de zoom de la page (1 =
+                    100%) pour s'affranchir du zoom par défaut rendant les
+                    contenus illisibles</li>
+
+                </ul>
+          </article >
+      <!--________________________________PHP__________________________________________________ -->
+      <article id="PHP">
+        <h2>PHP</h2>
+            <p id="PHPDef"><strong>PHP </strong> :<strong>H</strong>ypertext <strong>P</strong>reprocessor </p>
+            <h3>Syntaxe de base PHP :</h3>
+              <ul>
+                <li><strong> <?php ... ?> </strong>les balises d’échappement (début et fin) representant le corps du code php </li>
+                <li><strong> ; : </strong>instructions terminées par un point-virgule  </li>
+                <li><strong> {} : </strong>bloc d’instructions délimité par des accolades  </li>
+                <li><strong> // ou # : </strong>commantaire sur une ligne  </li>
+                <li><strong>/*...*/ : </strong>commantaire sur plusieurs lignes </li>
+                <li><strong>Type PHP : </strong> booléen, entier, réel (flottant), chaîne de caractères <br>
+                  le type d’une variable est déterminé par la valeur qu’on lui donne et peut changer au cours du programme </li>
+                <li><strong>$NomDeVariable : </strong> variable </li>
+                <li><strong>Variables dynamiques : </strong> exemple: <br>
+                  $pomme = 'golden'; <br>
+                  $fruit = 'pomme'; <br>
+                  print ${$fruit}; //équivalent à print $pomme;affiche golden ! <br>
+                  echo ${$fruit}; //équivalent à print $pomme;affiche golden !   </li>
+                  <li><strong>define : </strong> les constante n'on pas de $ et par convention elle sont en majuscule (ex:"define("TAUX",6.55957);") </li>
+              </ul>
+            <h3>Les opérateurs :</h3>
+              <ul>
+                <li><strong>Opérateurs arithmétiques :</strong><br>
+                 + - * / %</li>
+                <li><strong>Opérateurs de comparaison :</strong><br>
+                == != < <= > >= === !== </li>
+                <li><strong>Opérateurs booléens :</strong> <br>
+                ! AND && OR || XOR </li>
+                <li><strong>Opérateurs d'incrémentation et de décrémentation :</strong><br>
+                ++ -- </li>
+                <li><strong>Opérateurs d'affectation et de concaténation :</strong><br>
+                = . .= </li>
+              </ul>
+            <h3>Structures de contrôle : </h3>
+              <ul>
+                <li><strong>if/ if .. else / if .. elseif … :</strong> conditions (voir code pour Exemple)  </li>
+                <!--Exemple: if/elsif/else
+                   if ($i == 0) {print "i vaut 0";}
+                    elseif ($i == 1) {print "i vaut 1";}
+                      elseif ($i == 2) { print "i vaut 2";}
+                  else { print "i différent";}  -->
+                <li><strong>switch, … :</strong>plusieurs conditions (voir code pour Exemple)  </li>
+                  <!-- Exemple: switch
+                    switch ($val) { <br>
+                    case "pomme":<br>
+                      $i=0;<br>
+                      break;<br>
+                    case "poire": <br>
+                      $i=1; <br>
+                      break; <br>
+                    default: <br>
+                      $i=2; <br>
+                      break; <br>
+                      }  -->
+                <li> <strong>while / for / foreach… :</strong> les loop (voir code pour Exemple) </li>
+                  <!-- Exemple1: while/for
+                  $i = 0;<br>
+                  while ($i <= 9){<br>
+                    print $i;<br>
+                    $i++;<br>
+                  }<br>
+                Exemple2: <br>
+                for($i=1;$i<=10;$i++){<br>
+                  print $i;<br>
+                }-->
+              </ul>
+            <h3>Les chaînes de caractères :</h3>
+              <ul>
+                <li> <strong> interpretation des variables : </strong> une chaine de caracteres s'ecrit avec des "" ou '' on peux faire par exemple : <br>
+                  $fruit = "la pomme"; (ou $fruit = 'la pomme'); <br>
+                  $chaine1 = "mon fruit préféré est $fruit"; //mais attention pour ça il faut utiliser des "" </li>
+                  <li><strong>Caractère d'échappement \ :  </strong>??? </li>
+                  <li><strong>Concaténation de chaînes : </strong> on addition des valeurs de chaine de caracteres en mettent un .= entre les variable ou "=$1.$2" </li>
+                  <li><strong>Affichage simple :</strong> pour afficher des chaine de caracteres onn utilise echo() ou print() avec ou sans () (ex: print 'Bonjour') (ex2:echo 'PHP',5,' est super') </li>
+                  <li><strong>Affichage avec masque :</strong> pour afficher des variables avec masque <br>
+                  exemple: <br>
+                  $masque = 'la dernière version de %s est %s'; <br>
+                  printf ($masque,'PHP', '5.4.17'); <br>
+                  $chaine = sprintf ($masque,'PHP', '5.4.17');
+                 </li>
+                 <li><strong>Accès à un caractère d'une chaîne : </strong> pour acceder a un caractere dans une variable il faut faire $chaine[x] </li>
+                 <li><strong>strlen() : </strong> Taille d'une chaîne </li>
+                 <li><strong> strpos() : </strong>Position d'un motif dans une chaîne </li>
+                 <li><strong>str_replace() </strong> Remplacer un motif dans une chaîne </li>
+                 <li><strong>ereg() :</strong> Comparaison d’une chaîne à un motif</li>
+                 <li><strong>strtoupper() / strtolower() : </strong> Changement de casse</li>
+                 <li><strong>addslashes() stripslashes() : </strong> Echappement et inverse </li>
+              </ul>
+            <h3>Les tableaux (array) :</h3>
+              <h4>2 categories principales de tableau : </h4>
+                <ol>
+                  <li><strong>Tableau indexé numériquement : </strong><br>
+                    $tab = array('pomme','poire','pêche'); <br>
+                    $tab[0]= 'pomme'; $tab[1]= 'poire'; $tab[2]= 'pêche' <br>
+                    $tab[]= 'pomme'; $tab[]= 'poire'; $tab[]= 'pêche'; <br>
+                   </li>
+                  <li><strong>Tableau associatif : </strong> <br>
+                    $tab = array ( <br>
+                    'prenom' => 'toto', <br>
+                    'age' => 10, <br>
+                    'note' => 0 <br>
+                    ); </li>
+                </ol>
+              <h4>Traitements des tableaux : </h4>
+                <ul>
+                  <li><strong>print_r($nomTableau) (ou var_dump()) :</strong>Afficher un tableau </li>
+                  <li><strong> count ($nomTableau) :</strong> Taille d’un tableau</li>
+                  <li><strong>explode / implode : </strong> Convertir une chaîne en tableau (et inversement) (ex:$nomTableau = explode(",",$chaine);  ou implode pour faire l'inverse) </li>
+                  <li><strong>foreach (ou while , for) : </strong> Parcourir un tableau  <br>
+                <strong>exemple 1 :</strong>    <br>
+                  foreach ($nomTableau as $clef => $valeur) <br>
+                  { <br>
+                    echo $clef.' : '.$valeur.'<br />';
+                  } <br>
+                <strong>exemple 2 : </strong> parcourir tableau associatif <br>
+                $tab = array ( <br>
+                'prenom' => 'toto',<br>
+                'age' => 10, <br>
+                'note' => 0); <br>
+                foreach ($tab as $clef => $valeur) <br>
+                { <br>
+                  echo $clef.' : '.$valeur.'(br) ' ; <br>
+                } </li>
+                </ul>
+            <h3>Variables prédéfinies PHP :</h3>
+                <p>Il existe des variables prédéfinies, toujours accessibles (en anglais : superglobals) , Ce sont des tableaux qui contiennent des informations sur le contexte de communication entre le client et le serveur</p>
+                <ul>
+                  <li><strong>$_GET :</strong> Contient la liste des variables transmises via la méthode GET dans un formulaire</li>
+                  <li><strong>$_POST :</strong> Contient la liste des variables transmises via la méthode POST dans un formulaire</li>
+                  <li><strong>$_COOKIE :</strong> Contient la liste des variables transmises par le navigateur via les cookies</li>
+                  <li><strong>$_REQUEST :</strong> Ce tableau agrège $_POST $_GET $_COOKIE en un seul tableau</li>
+                  <li><strong>$_FILES :</strong> Dans un formulaire, il est possible de télécharger des fichiers. Ce tableau décrits ces fichiers.</li>
+                  <li><strong>$_SESSION :</strong> Ce tableau permet de manipuler directement les données de session utilisateur</li>
+                  <li><strong>$_SERVER :</strong> Permet de connaître le détail de la requête en cours (nom, chemin de la page,…) et les éléments spécifiques au serveur web (nom, version) et à la connexion (IP paramètres du navigateur,…)</li>
+                  <li><strong>$_ENV :</strong> Contient les variables de l'environnement d'exécution de l’interpréteur PHP</li>
+                  <li><strong>$GLOBALS :</strong> Contient l'ensemble des variables globales définies.</li>
+                </ul>
+            <h3>Traitement d'un formulaire :</h3>
+              <h4>Principe:</h4>
+              <p><?php <br>
+                $nom = $_GET['nm']; <br>
+                $prenom= $_GET['pn']; <br>
+                …/.. <br>
+                ?></p>
+                <h4>Securite XSS : </h4>
+              <p><strong>htmlentities() : </strong> La fonction htmlentities() remplace tous les caractères possibles en leur équivalent HTML</p>
+              <h4>Programme generique de traitement : </h4>
+              <p><?php <br>
+                echo "ul"; <br>
+                  If ( ! empty($_POST) ) { <br>
+                    foreach($_POST as $key => $value) { <br>
+                      echo "li $key: ".htmlentities($value)."/li";} <br>
+                    } <br>
+                    else { <br>
+                      foreach($_GET as $key => $value) { <br>
+                        echo "li $key: ".htmlentities($value)."/li";} <br>
+                      } <br>
+                      echo "/ul"; <br>
+                ?></p>
+
+      </article>
+
+    </div>
+      <!--________________________________PIED DE PAGE__________________________________________________ -->
+    <footer>
+        <h3>Les metiers du web : </h3>
+      <div id="definitions" >
+        <div id="GD">
+        <div>
+          <h4>La gestion de projet</h4>
+          <ul>
+            <li><strong>Chef de projet web : </strong>c’est le « chef d’orchestre » ; il
+              dirige la conception et la réalisation du site </li>
+            <li><strong>Architecte de l'information :</strong> organise et classifie l'information à publier </li>
+          </ul>
+        </div>
+        <div>
+          <h4>Graphisme et webdesign</h4>
+          <ul>
+            <li><strong>Graphiste (webdesigner) : </strong> conçoit et crée les éléments graphiques</li>
+            <li><strong>illustrateur : </strong> crée les parties images du site </li>
+            <li><strong>Ergonome : </strong> s'assure que les informations sont facilement accessibles à tous </li>
+          </ul>
+        </div>
+        <div>
+          <h4>Programmation et développement </h4>
+          <ul>
+            <li><strong>Intégrateur web</strong>il traduit tous les éléments
+              graphiques, vidéos, ou textes en langages web en
+              vue de la création du site ; il est en relation
+              régulière avec le webdesigner tout au long du
+              projet : de la conception à la mise à jour, au test
+              final du site web. (HTML, CSS, Ajax, framework
+              comme Bootstrap) </li>
+              <li><strong>Développeur ou Programmeur</strong> conçoit et réalise les éléments techniques du site ; crée les applications ou sous parties en langage
+                informatique. (PHP,ASP, JSP, framework comme Symfony)</li>
+                <li><strong>Animateur : </strong> crée des images animées (2D-3D), des applications flash, ou autres </li>
+                <li><strong>Spécialiste bases de données : </strong> conçoit, crée, gère les bases de données du site </li>
+          </ul>
+        </div>
+        </div>
+        <div id="GD2">
+        <div>
+          <h4>Administration</h4>
+          <ul>
+            <li><strong>Webmaster : </strong> gère au quotidien le site web et le met à jour. Il est aussi souvent responsable du développement du trafic </li>
+          </ul>
+        </div>
+        <div>
+          <h4>Gestion de l'information </h4>
+            <ul>
+             <li><strong>Documentaliste :</strong>collecte les informations qui
+               seront publiées, il les vérifie et les valide avant
+               publication </li>
+             <li><strong>Gestionnaire de contenus :</strong>gère le contenu du site </li>
+             <li><strong>Journaliste internet :</strong>écrit les textes </li>
+             <li><strong>Juriste :</strong> vérifie la légalité des informations publiées</li>
+            </ul>
+        </div>
+        <div>
+
+          <h4>Animation </h4>
+          <ul>
+            <li><strong>Animateur de site :</strong>gère l'ensemble des
+              contributeurs de contenus du site </li>
+            <li><strong>Gestionnaire de communauté :</strong>anime la
+              communauté au travers du site, des réseaux
+              sociaux, forums.... </li>
+          </ul>
+        </div>
+        <div>
+
+          <h4>Marketing et promotion</h4>
+          <ul>
+            <li><strong>Référenceur :</strong> favorise le référencement naturel du
+              site auprès des moteurs de recherche, il intervient
+              dès la conception du site</li>
+            <li><strong>Webmarketeur :</strong>élabore et met en place avec les
+              autres acteurs, la stratégie marketing internet du
+              site </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </footer>
+  </body>
+</html>
