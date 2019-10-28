@@ -1,30 +1,38 @@
+html{
+   font: 1.1em sans-serif;
+
+}
 body{
-    background: #67BE4B;
+    background-image:url("../../model/data/icons/fondecran.jpg");
 }
 #container{
     width:400px;
     margin:0 auto;
-    margin-top:10%;
+    margin-top:5%;
 }
 /* Bordered form */
 form {
     width:100%;
     padding: 30px;
-    border: 1px solid #f1f1f1;
-    background: #fff;
+    border: 1px solid #1BE81B;
+    background: #282828;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
-#container h1{
-    width: 38%;
+#container img{
+    width: 100%;
     margin: 0 auto;
     padding-bottom: 10px;
 }
+label {
+    color: #1BE81B;
 
+}
 /* Full-width inputs */
-input[type=text], input[type=password] {
+input[type=text], input[type=password],input[type=Email] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
+
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -32,8 +40,8 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 input[type=submit] {
-    background-color: #53af57;
-    color: white;
+    background-color: #1BE81B;
+    color: black;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -41,7 +49,7 @@ input[type=submit] {
     width: 100%;
 }
 input[type=submit]:hover {
-    background-color: white;
-    color: #53af57;
-    border: 1px solid #53af57;
+    background-color: green;
+    color: white;
+    border: 1px solid white;
 }

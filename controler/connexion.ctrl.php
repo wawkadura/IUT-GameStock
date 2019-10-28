@@ -1,11 +1,13 @@
 <?php
   if (isset($_GET['erreur'])) {
 
+    $erreur= " Utilisateur ou mot de passe incorrect";
+
   }
   else {
-    include('../view/connexion.view.html');
+    $erreur="";
   }
-
+    include('../view/connexion.view.php');
 
 
 

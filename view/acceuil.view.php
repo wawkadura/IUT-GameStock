@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="design/page.style.css">
+    <link rel="stylesheet" href="design/main.style.css">
     <link rel="icon" type="image/png" href="../model/data/icons/logo1.png" />
     <title>GameStock.com</title>
   </head>
@@ -35,7 +35,7 @@
           <li class="dropdown"><a href="#">Mon compte</a>
               <ul class="dropdown-child">
                 <li><a href="../controler/connexion.ctrl.php">Se connecter</a></li>
-                <li><a href="">S'inscrire</a></li>
+                <li><a href="../controler/inscription.ctrl.php">S'inscrire</a></li>
               </ul>
           </li>
       </ul>
