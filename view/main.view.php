@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="design/main.style.css">
+    <link rel="stylesheet" href="../view/design/main.style.css">
     <link rel="icon" type="image/png" href="../model/data/icons/logo1.png" />
     <title>GameStock.com</title>
   </head>
