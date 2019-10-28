@@ -4,7 +4,7 @@ html{
 }
 
 body{
-  background-image:url("data/fondecran.jpg");
+  background-image:url("../../model/data/icons/fondecran.jpg");
 }
 
 #hautpage {
@@ -90,7 +90,7 @@ a {
 #boutonrecherche{
     width: 45px;
     height: 45px;
-    background: url("data/loupe.png") 15px 14px no-repeat;
+    background: url("../../model/data/icons/loupe.png") 15px 14px no-repeat;
     background-size: auto;
     background-size: 23px;
     border: 0;

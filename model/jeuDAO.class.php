@@ -4,7 +4,7 @@ class jeu{
   private $numero;
   private $titre;
   private $prix;
-  datasortie
+  private $datasortie;
   function __construct($PATH){
     $database='sqlite:'.$PATH.'/GameStock.db';
     $this->db = new PDO($database);
