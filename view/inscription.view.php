@@ -9,7 +9,7 @@
         <div id="container">
             <!-- zone de connexion -->
 
-            <form action="verif.ctrl.php?verif='inscription'" method="POST">
+            <form action="verif.ctrl.php?verif=inscription" method="GET">
                 <img src="../model/data/icons/logo2.png" />
                 <br>
 

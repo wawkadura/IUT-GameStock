@@ -9,12 +9,13 @@
         <div id="container">
             <!-- zone de connexion -->
 
-            <form action="verif.ctrl.php?verif='inscription'" method="POST">
-                <img src="../model/data/icons/logo2.png" />
+            <form action="verif.ctrl.php?verif=connexion" method="GET">
+                <a href="../controler/main.ctrl.php?onglet=Acceuil"><img src="../model/data/icons/logo2.png" /></a>
+
                 <br>
 
                 <label><b>Nom d'utilisateur</b></label>
-                <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+                <input type="text" placeholder="Entrer votre pseudo" name="username" required>
 
                 <label><b>Mot de passe</b></label>
                 <input type="password" placeholder="Entrer le mot de passe" name="password" required>

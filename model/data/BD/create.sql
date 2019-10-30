@@ -24,6 +24,7 @@ note INTEGER(10),
 numeroJeu INTEGER(10),
 PRIMARY KEY(pseudo,dateAjoute),
 FOREIGN KEY(numeroJeu) REFERENCES jeu(numero)
+FOREIGN KEY(pseudo) REFERENCES adherent(pseudo)
 );
 
 CREATE TABLE image(
@@ -33,4 +34,13 @@ type VARCHAR(10),
 cheminimage VARCHAR(100),
 PRIMARY KEY(numeimage)
 FOREIGN KEY(numeroJeu) REFERENCES jeu(numero)
+);
+
+CREATE TABLE adherent(
+id INTEGER(10) PRIMARY KEY,
+pseudo VARCHAR(10),
+nom VARCHAR(10),
+prenom VARCHAR(10),
+email VARCHAR(30),
+motdepasse VARCHAR(50)
 );
