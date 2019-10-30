@@ -21,13 +21,16 @@ pseudo VARCHAR(10),
 dateAjoute DATE ,
 description VARCHAR(255),
 note INTEGER(10),
-numeroJeu INTEGER(10) FOREIGN KEY,
-PRIMARY KEY(pseudo,dateAjoute)
+numeroJeu INTEGER(10),
+PRIMARY KEY(pseudo,dateAjoute),
+FOREIGN KEY(numeroJeu) REFERENCES jeu(numero)
 );
 
 CREATE TABLE image(
-numeoimage INTEGER(10) PRIMARY KEY,
+numeimage INTEGER(10),
 numeroJeu INTEGER(10),
 type VARCHAR(10),
-FOREIGN KEY(type)
+cheminimage VARCHAR(100),
+PRIMARY KEY(numeimage)
+FOREIGN KEY(numeroJeu) REFERENCES jeu(numero)
 );
