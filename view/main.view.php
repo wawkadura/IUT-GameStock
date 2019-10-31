@@ -43,7 +43,7 @@
 
   <div id="milieupage">
     <?php
-      for ($i=0; $i <50 ; $i++) {
+      for ($i=0; $i <count($list) ; $i++) {
         $jeu=$list[$i];
         $img=$images->getCover($i+1);
         $titre=$jeu[1];

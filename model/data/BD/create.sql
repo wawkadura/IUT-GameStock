@@ -1,5 +1,5 @@
 CREATE TABLE jeu(
-numero INTEGER PRIMARY KEY,
+numJeu INTEGER PRIMARY KEY,
 titre varchar(50),
 prix INTEGER(10),
 datesortie DATE,
@@ -11,7 +11,7 @@ plateforme VARCHAR(10)
 CREATE TABLE image(
 numimage INTEGER(10),
 fichier VARCHAR(100),
-PRIMARY KEY(numeimage)
+PRIMARY KEY(numimage)
 );
 
 CREATE TABLE adherent(
@@ -30,6 +30,6 @@ message VARCHAR(255),
 note INTEGER(10),
 numJeu INTEGER(10),
 PRIMARY KEY(pseudo,dateAjoute),
-FOREIGN KEY(numeroJeu) REFERENCES jeu(numero)
+FOREIGN KEY(numJeu) REFERENCES jeu(numJeu)
 FOREIGN KEY(pseudo) REFERENCES adherent(pseudo)
 );
