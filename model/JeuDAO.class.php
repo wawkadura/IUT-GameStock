@@ -26,5 +26,7 @@ class JeuDAO{
     $res=$music->fetchAll( PDO::FETCH_CLASS[0]);
     return $res[0];
   }
+
+  
 }
  ?>
