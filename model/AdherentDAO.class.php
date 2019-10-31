@@ -4,7 +4,7 @@ class AdherentDAO{
 
   function __construct($PATH){
     try{
-      $database='sqlite:'.$PATH.'/gamestock.db';
+      $database='sqlite:'.$PATH.'/testgamestock.db';
       $this->db = new PDO($database);
     }
     catch (PDOException $e){
@@ -37,6 +37,16 @@ class AdherentDAO{
     $res=$adherents->fetch( PDO::FETCH_CLASS[0]);
     return $res[0];
   }
+  function AjouterAdherent($id,$pseudo,$nom,$prenom,$email,$motdepasse){
+    $adherent= $this->db->query("INSERT INTO adherent (id, pseudo,nom,prenom,email,motdepasse) VALUES ($id, $pseudo,$nom,$prenom,$email,$motdepasse)");
+    if($adherent){
+    $message = "Data inserted successfully.";
+
+    }else{
+
+    $message = "Sorry, Data is not inserted.";
+  }
+}
 }
 
 
