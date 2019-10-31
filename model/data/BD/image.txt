@@ -5,7 +5,7 @@
 5|overwatch-cover.jpg
 6|world-of-warcraft-cover.jpg
 7|borderlands-3-cover.jpg
-8|controls-cover.jpg
+8|control-cover.jpg
 9|detroit-become-humain-cover.jpg
 10|fortnite-cover.jpg
 11|battlefield-1-cover.jpg

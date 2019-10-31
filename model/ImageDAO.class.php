@@ -17,12 +17,12 @@ class ImageDAO{
     return $res;
   }
   function getCover($id){
-    $images= $this->db->query("SELECT * FROM image WHERE  numeimage=$id and type='cover'" );
+    $images= $this->db->query("SELECT * FROM image WHERE  numimage=$id " );
     $res=$images->fetchAll( PDO::FETCH_CLASS[0]);
     return $res[0];
   }
   function getImages($id){
-    $images= $this->db->query("SELECT * FROM image WHERE  numeimage=$id and type='images'" );
+    $images= $this->db->query("SELECT * FROM image WHERE  numimage=$id" );
     $res=$images->fetchAll( PDO::FETCH_CLASS[0]);
     return $res[0];
   }
