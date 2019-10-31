@@ -9,7 +9,7 @@
         <div id="container">
             <!-- zone de connexion -->
 
-            <form action="verif.ctrl.php?verif=connexion" method="GET">
+            <form action="verif.ctrl.php?verif=connexion" method="POST">
                 <a href="../controler/main.ctrl.php?onglet=Acceuil"><img src="../model/data/icons/logo2.png" /></a>
 
                 <br>
