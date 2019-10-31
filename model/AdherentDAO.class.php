@@ -31,22 +31,28 @@ class AdherentDAO{
     $res=$adherents->fetchAll( PDO::FETCH_CLASS[0]);
     return $res;
   }
+  function exist($pseudo){
+    $adherents= $this->db->query("SELECT pseudo FROM adherent WHERE  pseudo='$pseudo'" );
+    $res=$adherents->fetchAll( PDO::FETCH_CLASS[0]);
+    if (count($res)>0) {
+      return true;
+    }else {
+      return false;
+    }
 
-  function getMail($id){
-    $adherents= $this->db->query("SELECT email FROM adherent WHERE  id=$id" );
-    $res=$adherents->fetch( PDO::FETCH_CLASS[0]);
-    return $res[0];
   }
-  function AjouterAdherent($id,$pseudo,$nom,$prenom,$email,$motdepasse){
-    $adherent= $this->db->query("INSERT INTO adherent (id, pseudo,nom,prenom,email,motdepasse) VALUES ($id, $pseudo,$nom,$prenom,$email,$motdepasse)");
-    if($adherent){
-    $message = "Data inserted successfully.";
+  function CreeAdherent($pseudo,$nom,$prenom,$email,$motdepasse){
+    $adherents= $this->db->query("SELECT id FROM adherent ORDER BY id DESC LIMIT 1" );
 
-    }else{
+    $id=$adherents->fetchAll( PDO::FETCH_CLASS[0]);
 
-    $message = "Sorry, Data is not inserted.";
+    $id=$id[0][0];
+    var_dump($id);
+    $query="INSERT INTO adherent (id, pseudo,nom,prenom,email,motdepasse) VALUES ($id+1, $pseudo,$nom,$prenom,$email,$motdepasse)";
+    $adherent= $this->db->exec($query); //marche pas
+    var_dump($adherent);
+    return $adherent;
   }
-}
 }
 
 

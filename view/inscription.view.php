@@ -9,36 +9,30 @@
         <div id="container">
             <!-- zone de connexion -->
 
-            <form action="verif.ctrl.php?verif=inscription" method="GET">
+            <form action="verif.ctrl.php?verif=inscription" method="POST">
                 <img src="../model/data/icons/logo2.png" />
                 <br>
 
                 <label><b>Nom</b></label>
-                <input type="text" placeholder="Entrer le nom " name="Nom" required>
+                <input type="text" placeholder="Entrer le nom " name="nom" required>
 
                 <label><b>Prénom</b></label>
-                <input type="text" placeholder="Entrer le prenom" name="Prenom" required>
+                <input type="text" placeholder="Entrer le prenom" name="prenom" required>
 
-                <label><b>pseudo</b></label>
+                <label><b>Pseudo</b></label>
                 <input type="text" placeholder="Entrer le pseudo" name="pseudo" required>
 
                 <label><b>Mot de passe</b></label>
                 <input type="password" placeholder="Entrer le mot de passe" name="password" required>
 
                 <label><b>Confirmer mot de passe</b></label>
-                <input type="password" placeholder="Entrer le mot de passe" name="ConfirmPassword" required>
+                <input type="password" placeholder="Entrer le mot de passe" name="confirmPassword" required>
 
                 <label><b>Email</b></label>
-                <input type="email" placeholder="Entrer l'adresse mail" name="password" required>
+                <input type="email" placeholder="Entrer l'adresse mail" name="mail" required>
 
                 <input type="submit" id='submit' value='SIGN UP' >
-                <?php
-                if(isset($_GET['erreur'])){
-                    $err = $_GET['erreur'];
-                    if($err==1 || $err==2)
-                        echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                }
-                ?>
+                <p style='color:red'> <?=$erreur ?></p>
 
             </form>
         </div>

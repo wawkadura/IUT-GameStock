@@ -16,12 +16,17 @@ class CommentaireDAO{
     $res=$comm->fetchAll( PDO::FETCH_CLASS[0]);
     return $res;
   }
-
-  function getCommentaire($pseudo,$dateAjoute){
-    $comm= $this->db->query("SELECT * FROM commentaire WHERE pseudo=$pseudo and dateAjoute=$dateAjoute");
+  function getCommentaires($id){
+    $comm= $this->db->query("SELECT * FROM commentaire WHERE numJeu=$id");
     $res=$comm->fetchAll( PDO::FETCH_CLASS[0]);
-    return $res[0];
+    return $res;
   }
+  function getCommentairesAdherent($pseudo){
+    $comm= $this->db->query("SELECT * FROM commentaire WHERE pseudo='$pseudo' ");
+    $res=$comm->fetchAll( PDO::FETCH_CLASS[0]);
+    return $res;
+  }
+
 
 
 }

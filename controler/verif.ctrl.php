@@ -1,21 +1,23 @@
 <?php
+
   if (isset($_GET['verif'])) {
     $verif=$_GET['verif'];
   }else {
     $verif='connexion';
   }
+
   require_once('../model/AdherentDAO.class.php');
   $config = parse_ini_file('../config/config.ini');
-  $adherent = new AdherentDAO($config['database']);
+  $adherents = new AdherentDAO($config['database']);
   if ($verif=='connexion') {
-    $pseudo=$_GET['username'];
-    $MDP=$_GET['password'];
-    $TrueMDP = $adherent->getMDP($pseudo);
-    var_dump($TrueMDP);
-    if (count($TrueMDP)>0) {
-      if ($TrueMDP[0][0]==$MDP) {
-        $id=$adherent->getProfil($pseudo);
-        //header('Location: profil.ctrl.php?id='.$id[0][0]);
+    $pseudo=$_POST['username'];
+    $MDP=$_POST['password'];
+    $MDPofficel = $adherents->getMDP($pseudo);
+
+    if (count($MDPofficel)>0) {
+      if ($MDPofficel[0][0]==$MDP) {
+        $id=$adherents->getProfil($pseudo);
+        header('Location: profil.ctrl.php?id='.$id[0][0]);
       }else {
         header('Location: connexion.ctrl.php?erreur=1');
       }
@@ -24,7 +26,28 @@
     }
   }
   if ($verif=='inscription') {
-    // code...
+
+    $nom=$_POST['nom'];
+    $prenom=$_POST['prenom'];
+    $pseudo=$_POST['pseudo'];
+    $MDP=$_POST['password'];
+    $confirmationMDP=$_POST['confirmPassword'];
+    $email=$_POST['mail'];
+
+    if (!$adherents->exist($pseudo)) {
+      if ($MDP==$confirmationMDP) {
+        $valider=$adherents->CreeAdherent($pseudo,$nom,$prenom,$MDP,$email);
+        /*if ($valider) {
+          header('Location: inscriptionValider.view.html');
+        }else {
+          header('Location: inscription.ctrl.php?erreur=L\'inscription a ECHOUE desole!');
+        }*/
+      }else {
+        header('Location: inscription.ctrl.php?erreur=Les mots de passes ne corresponde pas!');
+      }
+    }else {
+      header('Location: inscription.ctrl.php?erreur=Pseudo existant');
+    }
   }
 
 
