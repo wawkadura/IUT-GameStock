@@ -38,4 +38,46 @@ class AdherentDAO{
     return $res[0];
   }
 }
+
+
+
+/* $query = "INSERT INTO students (name, email) VALUES ('$name', '$email')";
+13
+
+14
+    // Executes the query
+15
+    // If data inserted then set success message otherwise set error message
+16
+    if( $db->exec($query) ){
+17
+        $message = "Data inserted successfully.";
+18
+    }else{
+19
+        $message = "Sorry, Data is not inserted.";
+
+
+
+
+        $query = "UPDATE students set name='$name', email='$email' WHERE rowid=$id";
+       17
+
+       18
+           // Executes the query
+       19
+           // If data inserted then set success message otherwise set error message
+       20
+           // Here $db comes from "db_connect.php"
+       21
+           if( $db->exec($query) ){
+       22
+               $message = "Data is updated successfully.";
+       23
+           }else{
+       24
+               $message = "Sorry, Data is not updated.";
+       25
+           }
+*/
  ?>
