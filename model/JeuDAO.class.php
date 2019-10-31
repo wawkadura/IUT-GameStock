@@ -12,21 +12,33 @@ class JeuDAO{
   }
 }
   function getAll(){
-    $music= $this->db->query("SELECT * FROM jeu");
-    $res=$music->fetchAll( PDO::FETCH_CLASS[0]);
+    $jeu= $this->db->query("SELECT * FROM jeu");
+    $res=$jeu->fetchAll( PDO::FETCH_CLASS[0]);
     return $res;
   }
+
   function getJeuxPlatforme($platforme){
-    $music= $this->db->query("SELECT * FROM jeu WHERE platforme=$platforme");
-    $res=$music->fetchAll( PDO::FETCH_CLASS[0]);
+    $jeu= $this->db->query("SELECT * FROM jeu WHERE plateforme='$platforme'");
+    $res=$jeu->fetchAll( PDO::FETCH_CLASS[0]);
     return $res;
+  }
+  function getRecherche($recherche){
+    $jeu= $this->db->query("SELECT * FROM jeu WHERE titre='$recherche'");
+    $res=$jeu->fetchAll( PDO::FETCH_CLASS[0]);
+    if (count($res)>0) {
+      return $res[0];
+    }else {
+      return false;
+
+    }
+
   }
   function getJeux($id){
-    $music= $this->db->query("SELECT * FROM jeu WHERE numero=$id");
-    $res=$music->fetchAll( PDO::FETCH_CLASS[0]);
+    $jeu= $this->db->query("SELECT * FROM jeu WHERE numero=$id");
+    $res=$jeu->fetchAll( PDO::FETCH_CLASS[0]);
     return $res[0];
   }
 
-  
+
 }
  ?>

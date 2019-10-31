@@ -14,8 +14,8 @@
   <div id="hautpage">
       <div class="titre">
           <a href="../controler/main.ctrl.php?onglet=Acceuil" id="logo"> <img src="../model/data/icons/logo2.png" align="left"/></a>
-          <form id="rechercher" action="" method="get" role="search">
-              <input id="boiterecherche" type="text" value="">
+          <form id="rechercher" action="recherche.ctrl.php" method="GET">
+              <input id="boiterecherche" type="text" name="cherche">
               <input id="boutonrecherche" type="submit" value="">
           </form>
       </div>
@@ -45,9 +45,9 @@
     <?php
       for ($i=0; $i <count($list) ; $i++) {
         $jeu=$list[$i];
-        $img=$images->getCover($i+1);
+        $img=$images->getCover($jeu[0]);
         $titre=$jeu[1];
-        echo "<p> <img src=$chemin/$img[1] alt=\"\" width=\"140px\" height=\"180px\"> $titre</p> ";
+        echo "<p> <a href=\"../controler/jeu.ctrl.php?id=$jeu[0]\"><img src=$chemin/$img[1] alt=\"\" width=\"140px\" height=\"180px\"> $titre </a></p> ";
       }
      ?>
   </div>

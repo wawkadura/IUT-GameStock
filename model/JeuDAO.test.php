@@ -13,7 +13,7 @@
   $m=$jeux->getJeux(1);
   var_dump($m);
 
-  $m=$jeux->getJeuxPlatforme('playstation');
+  $m=$jeux->getJeuxPlatforme('Steam');
   var_dump($m);
 
 
