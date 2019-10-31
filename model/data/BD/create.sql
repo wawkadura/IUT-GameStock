@@ -3,18 +3,20 @@ numero INTEGER PRIMARY KEY,
 titre varchar(50),
 prix INTEGER(10),
 datesortie DATE,
-description VARCHAR(255)
+description VARCHAR(255),
+categorie VARCHAR(10),
+plateforme VARCHAR(10)
 );
 
 
-CREATE TABLE catégorie(
+/*CREATE TABLE catégorie(
+ PRIMARY KEY
+);*/
+
+
+/*CREATE TABLE plateforme(
 nom VARCHAR(10) PRIMARY KEY
-);
-
-
-CREATE TABLE plateforme(
-nom VARCHAR(10) PRIMARY KEY
-);
+);*/
 
 CREATE TABLE commentaire(
 pseudo VARCHAR(10),
