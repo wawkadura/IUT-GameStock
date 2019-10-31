@@ -22,13 +22,12 @@
 
       <div class="onglets">
         <ul>
-          <li><a href="../controler/main.ctrl.php?onglet=EpicGames">Epic Games</a></li>
-          <li><a href="../controler/main.ctrl.php?onglet=Battle.net">Battle.net</a></li>
-          <li><a href="../controler/main.ctrl.php?onglet=GOG.com">GOG.com</a></li>
+        <!--  <li><a href="../controler/main.ctrl.php?onglet=EpicGames">Epic Games</a></li>-->
+        <!--  <li><a href="../controler/main.ctrl.php?onglet=Battle.net">Battle.net</a></li>-->
+        <!--  <li><a href="../controler/main.ctrl.php?onglet=GOG.com">GOG.com</a></li> -->
           <li><a href="../controler/main.ctrl.php?onglet=Nintendo">Nintendo</a></li>
           <li><a href="../controler/main.ctrl.php?onglet=Origin">Origin</a></li>
           <li><a href="../controler/main.ctrl.php?onglet=Playstation">Playstation</a></li>
-          <li><a href="../controler/main.ctrl.php?onglet=Rockstar">Rockstar</a></li>
           <li><a href="../controler/main.ctrl.php?onglet=Steam">Steam</a></li>
           <li><a href="../controler/main.ctrl.php?onglet=Uplay">Uplay</a></li>
           <li><a href="../controler/main.ctrl.php?onglet=Xbox">Xbox</a></li>

@@ -8,34 +8,21 @@ categorie VARCHAR(10),
 plateforme VARCHAR(10)
 );
 
-
-/*CREATE TABLE catégorie(
- PRIMARY KEY
-);*/
-
-
-/*CREATE TABLE plateforme(
-nom VARCHAR(10) PRIMARY KEY
-);*/
-
 CREATE TABLE commentaire(
 pseudo VARCHAR(10),
 dateAjoute DATE ,
-description VARCHAR(255),
+message VARCHAR(255),
 note INTEGER(10),
-numeroJeu INTEGER(10),
+numJeu INTEGER(10),
 PRIMARY KEY(pseudo,dateAjoute),
 FOREIGN KEY(numeroJeu) REFERENCES jeu(numero)
 FOREIGN KEY(pseudo) REFERENCES adherent(pseudo)
 );
 
 CREATE TABLE image(
-numeimage INTEGER(10),
-numeroJeu INTEGER(10),
-type VARCHAR(10),
-cheminimage VARCHAR(100),
+numimage INTEGER(10),
+fichier VARCHAR(100),
 PRIMARY KEY(numeimage)
-FOREIGN KEY(numeroJeu) REFERENCES jeu(numero)
 );
 
 CREATE TABLE adherent(

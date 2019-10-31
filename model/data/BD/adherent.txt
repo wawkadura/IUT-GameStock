@@ -1,5 +1,10 @@
 1|waw|kadura|walid|walid.kadura@yahoo.com|wawverycool
-2|asci|watrin|cesar|c.w@yahoo.com|cverycool
-3|amine|benmansour|amine|a.b@yahoo.com|averycool
-4|waw|kadura|walid|walid.kadura@yahoo.com|wawverycool
-5|waw|kadura|walid|walid.kadura@yahoo.com|wawverycool
+2|asci|watrin|cesar|cesar.watrin@yahoo.com|c
+3|amine|benmansour|amine|amine.benmansour@yahoo.com|a
+4|jack|smith|jack|jack.smith@yahoo.com|j
+5|louis|smith|louis|louis.smith@yahoo.com|l
+6|antoine|smith|antoine|antoine.smith@yahoo.com|a
+7|gabriel|smith|gabriel|gabriel.smith@yahoo.com|g
+8|david|smith|david|david.smith@yahoo.com|d
+9|michel|smith|michel|michel.smith@yahoo.com|m
+10|anthony|smith|anthony|anthony.smith@yahoo.com|a
