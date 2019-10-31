@@ -157,6 +157,22 @@ a {
   margin: 4%;
 }
 
+#milieupage img:hover{
+  display: inline-block;
+  margin: 4%;
+  height: 300px;
+  width: 260px;
+  transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -webkit-transition-duration: 300ms;
+}
+
+#milieupage img{
+  transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -webkit-transition-duration: 300ms;
+}
+
 #milieupage p{
   font-size: 140%;
   text-align: center;
