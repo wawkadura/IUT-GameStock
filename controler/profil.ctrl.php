@@ -2,7 +2,7 @@
 if (isset($_GET['id'])) {
   $id=$_GET['id'];
 }else {
-  $id='1';
+  $id=1;
 }
 require_once('../model/AdherentDAO.class.php');
 require_once('../model/CommentaireDAO.class.php');

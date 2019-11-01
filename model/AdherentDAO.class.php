@@ -39,7 +39,7 @@ class AdherentDAO{
     }else {
       return false;
     }
-    
+
 
   }
   function CreeAdherent($pseudo,$nom,$prenom,$email,$motdepasse){
