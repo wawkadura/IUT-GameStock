@@ -1,5 +1,5 @@
 <?php
-if (isset($_GET['cherche']) && $_GET['cherche']!='') {
+if (isset($_GET['cherche']) ) {
   $recherche=$_GET['cherche'];
   //$attr=explode( ' ', $recherche );
 
