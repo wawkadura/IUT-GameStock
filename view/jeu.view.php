@@ -43,11 +43,12 @@
         //$listcom : list des commentaitres
           echo "<a href=\"../controler/jeu.ctrl.php?id=$jeu[0]\"><img src=$chemin/$image[1] alt=\"\" width=\"440px\" height=\"500px\"> <p id=\"prix\">$jeu[2]€</p> </a>";
 
-          echo "<h2>$dateSortie</h2>";
-          echo "<h2>$plateforme</h2>";
-          echo "<h2>$categorie</h2>";
+          echo "<h2> Date de sortie : $dateSortie</h2>";
+          echo "<h2> Plateforme : $plateforme</h2>";
+          echo "<h2> Catégorie : $categorie</h2>";
 
           echo "<fieldset class=\"description\">";
+          echo "<legend>Description</legend>";
           echo "<h4>$description<h4>";
 
           echo "</fieldset>";

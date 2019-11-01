@@ -219,6 +219,13 @@ h1{
   top: -400px;
 }
 
+legend{
+  text-align: left;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: white;
+  font-size: 35px;
+}
+
 h2,h3{
   text-align: center;
   -webkit-text-stroke: 1px;
