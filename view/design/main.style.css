@@ -185,7 +185,19 @@ a {
   -webkit-text-stroke-color: lime;
   /* -webkit-box-reflect: below 0 linear-gradient(transparent,white); */
 }
+#prix{
+  font-size: 10%;
+  text-align: center;
+  color: blue;
+  font-style: oblique;
+  font-family: fantasy;
+  /* font-variant: small-caps; */
+  font-weight: bold;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: blue;
+  /* -webkit-box-reflect: below 0 linear-gradient(transparent,white); */
 
+}
 input{
     font-family: proxima-nova,arial,sans-serif;
 }
