@@ -370,8 +370,15 @@ nav ul li a:focus::before{
   background: rgba(0, 0, 0, .5);
 }
 
+.message{
+  text-align: center;
+  background: rgba(0, 0, 0, .3);
+  border-color: lime;
+}
+
 .message #psd {
   height: 30px;
+  margin: 20px;
   background: 0 0;
   color: lime;
   border: 0;
@@ -380,8 +387,8 @@ nav ul li a:focus::before{
   border-bottom-width: 0px;
   border-bottom: 2px solid lime;
   outline: 0;
-  font-size: 24px;
-  width: 220px;
+  font-size: 20px;
+  width: 240px;
   border-radius: 0;
   position: relative;
   top: -5px;
@@ -391,10 +398,28 @@ nav ul li a:focus::before{
 }
 
 .message textarea{
-
+  border: 2px solid lime;
+  height: 100px;
+  width: 500px;
+  background: rgba(0, 0, 0, .5);
+  font-size: 20px;
 }
 
 .message #sbt{
+  margin: 20px;
+  height: 30px;
+  background: 0 0;
+  color: lime;
+  border: 0;
+  border: 2px solid lime;
+  outline: 0;
+  font-size: 24px;
+  width: 220px;
+  border-radius: 0;
+  position: relative;
+  top: -5px;
+  transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -webkit-transition-duration: 300ms;
 
-  
 }
