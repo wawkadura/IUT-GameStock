@@ -369,3 +369,32 @@ nav ul li a:focus::before{
   color: lime;
   background: rgba(0, 0, 0, .5);
 }
+
+.message #psd {
+  height: 30px;
+  background: 0 0;
+  color: lime;
+  border: 0;
+  border-bottom-color: lime;
+  border-bottom-style: none;
+  border-bottom-width: 0px;
+  border-bottom: 2px solid lime;
+  outline: 0;
+  font-size: 24px;
+  width: 220px;
+  border-radius: 0;
+  position: relative;
+  top: -5px;
+  transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -webkit-transition-duration: 300ms;
+}
+
+.message textarea{
+
+}
+
+.message #sbt{
+
+  
+}

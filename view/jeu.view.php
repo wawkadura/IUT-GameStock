@@ -67,12 +67,12 @@
        <fieldset class="message">
        <form action="jeu.ctrl.php?commentaire=1" method="POST">
            <label><b>pseudo : </b></label>
-           <input type="text" placeholder="Entrer votre pseudo" name="pseudo" required>
+           <input id="psd" type="text" placeholder="Entrer votre pseudo" name="pseudo" required>
            <br>
            <label><b>Message : </b></label>
            <textarea cols="50" rows="2" name="message" required></textarea>
            <br>
-           <input type="submit" id='submit' value='submit' >
+           <input type="submit" id='sbt' value='Poster' >
 
        </form>
        </fieldset>
