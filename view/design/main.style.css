@@ -152,6 +152,10 @@ a {
 
 }
 
+#milieupage{
+  text-align: center;
+}
+
 #milieupage a{
   display: inline-block;
   margin: 4%;
