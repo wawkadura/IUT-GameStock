@@ -38,7 +38,7 @@
               <?php
                 if (isset($connecter)) {
                   echo"<li><a class=\"compte\" href=\"../controler/profil.ctrl.php?id=$connecter[0]\">$connecter[1]</a></li>";
-                  echo"<li><a class=\"compte\" href=\"../controler/main.ctrl.php?onglet=Acceuil\">déconnecte</a></li>";
+                  echo"<li><a class=\"compte\" href=\"../controler/main.ctrl.php?onglet=Acceuil\">Se déconnecter</a></li>";
                 } else {
                   echo"<li><a class=\"compte\" href=\"../controler/connexion.ctrl.php\">Se connecter</a></li>";
                   echo "<li><a class=\"compte\" href=\"../controler/inscription.ctrl.php\">S'inscrire</a></li>";
