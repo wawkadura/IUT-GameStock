@@ -58,7 +58,7 @@
         $jeu=$list[$i];
         $img=$images->getCover($jeu[0]);
         $titre=$jeu[1];
-        echo "<a href=\"../controler/jeu.ctrl.php?id=$jeu[0]\"><img src=$chemin/$img[1] alt=\"\" width=\"240px\" height=\"280px\"> <p>$titre</p> </a>";
+        echo "<a href=\"../controler/jeu.ctrl.php?id=$jeu[0]\"><img src=$chemin/$img[1] alt=\"\" width=\"240px\" height=\"280px\"> <p>$titre</p> <p id=\"prix\">$jeu[2]€</p> </a>";
       }
      ?>
   </div>
