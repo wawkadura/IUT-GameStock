@@ -11,7 +11,7 @@
 
     <?php
       if (isset($connecter)) {
-        $param="& connecter=$connecter[0] ";
+        $param="&connecter=$connecter[0]";
       }else {
         $param="";
       }
@@ -19,7 +19,7 @@
      ?>
   <div id="hautpage">
       <div class="titre">
-          <a href="../controler/main.ctrl.php?onglet=Acceuil <?=$param ?>" id="logo"> <img src="../model/data/icons/logo2.png" align="left"/></a>
+          <a href="../controler/main.ctrl.php?onglet=Acceuil<?=$param ?>" id="logo"> <img src="../model/data/icons/logo2.png" align="left"/></a>
           <form id="rechercher" action="recherche.ctrl.php" method="GET">
               <input id="boiterecherche" type="text" name="cherche">
               <input id="boutonrecherche" type="submit" value="">
@@ -28,12 +28,12 @@
 
       <nav class="onglets">
         <ul>
-          <li><a class="plateforme" href="../controler/main.ctrl.php?onglet=Nintendo <?=$param ?>">Nintendo</a></li>
-          <li><a class="plateforme" href="../controler/main.ctrl.php?onglet=Origin <?=$param ?>">Origin</a></li>
-          <li><a class="plateforme" href="../controler/main.ctrl.php?onglet=Playstation <?=$param ?>">Playstation</a></li>
-          <li><a class="plateforme" href="../controler/main.ctrl.php?onglet=Steam <?=$param ?>">Steam</a></li>
-          <li><a class="plateforme" href="../controler/main.ctrl.php?onglet=Uplay <?=$param ?>">Uplay</a></li>
-          <li><a class="plateforme" href="../controler/main.ctrl.php?onglet=Xbox <?=$param ?>">Xbox</a></li>
+          <li><a class="plateforme" href="../controler/main.ctrl.php?onglet=Nintendo<?=$param ?>">Nintendo</a></li>
+          <li><a class="plateforme" href="../controler/main.ctrl.php?onglet=Origin<?=$param ?>">Origin</a></li>
+          <li><a class="plateforme" href="../controler/main.ctrl.php?onglet=Playstation<?=$param ?>">Playstation</a></li>
+          <li><a class="plateforme" href="../controler/main.ctrl.php?onglet=Steam<?=$param ?>">Steam</a></li>
+          <li><a class="plateforme" href="../controler/main.ctrl.php?onglet=Uplay<?=$param ?>">Uplay</a></li>
+          <li><a class="plateforme" href="../controler/main.ctrl.php?onglet=Xbox<?=$param ?>">Xbox</a></li>
 
               <?php
                 if (isset($connecter)) {
