@@ -8,7 +8,7 @@
     <div id="hautpage">
         <div class="titre">
             <?php
-              echo "<a href=\"../controler/main.ctrl.php?onglet=Acceuil&connecter=$profil[0]\" id=\"logo\"> <img src=\"../model/data/icons/logo2.png\" align=\"left\"/></a>";  
+              echo "<a href=\"../controler/main.ctrl.php?onglet=Acceuil&connecter=$profil[0]\" id=\"logo\"> <img src=\"../model/data/icons/logo2.png\" align=\"left\"/></a>";
             ?>
 
         </div>
@@ -17,5 +17,6 @@
       var_dump($profil);
       var_dump($listcom);
      ?>
+     </div>
   </body>
 </html>

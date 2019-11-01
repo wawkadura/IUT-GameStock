@@ -51,12 +51,11 @@
 
   <div id="milieupage">
     <ul id="triage">
-	     <li><a href="#">Trier par :</a>
+	     <li><p>Trier par :</p>
 		       <ul>
-			          <li><a href="#">Date</a></li>
-			          <li><a href="#">Prix Croissant</a></li>
-			          <li><a href="#">Prix Décroissant</a></li>
-			          <li><a href="#">Note des joueurs</a></li>
+			          <li><a href="../controler/main.ctrl.php?onglet=<?=$onglet?>& Trier=prix">Prix Croissant</a></li>
+			          <li><a href="../controler/main.ctrl.php?onglet=<?=$onglet?>& Trier=prix DESC">Prix Décroissant</a></li>
+			          <!--<li><a href="../controler/main.ctrl.php?onglet=Nintendo& Trier=Date">Note des joueurs</a></li>-->
 		      </ul>
 	    </li>
     </ul>

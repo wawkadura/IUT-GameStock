@@ -4,34 +4,34 @@ class AdherentDAO{
 
   function __construct($PATH){
     try{
-      $database='sqlite:'.$PATH.'/testgamestock.db';
+      $database='sqlite:'.$PATH.'/gamestock.db';
       $this->db = new PDO($database);
     }
     catch (PDOException $e){
       die("erreur de connexion:".$e->getMessage());
   }
 }
-  function getAll(){
+  function getAll(){ //avoir la list de tous les objets adherent dans la base de données
     $adherents= $this->db->query("SELECT * FROM adherent");
     $res=$adherents->fetchAll( PDO::FETCH_CLASS[0]);
     return $res;
   }
-  function getAdherent($id){
+  function getAdherent($id){ // permet d'obtenir l'objet adherent de id = $id
     $adherents= $this->db->query("SELECT * FROM adherent WHERE  id=$id" );
     $res=$adherents->fetchAll( PDO::FETCH_CLASS[0]);
     return $res[0];
   }
-  function getProfil($pseudo){
+  function getProfil($pseudo){ //permet d'obtenir l'objet adherent a partir du pseudo
     $adherents= $this->db->query("SELECT * FROM adherent WHERE  pseudo='$pseudo' " );
     $res=$adherents->fetchAll( PDO::FETCH_CLASS[0]);
     return $res;
   }
-  function getMDP($pseudo){
+  function getMDP($pseudo){ //permet d'obtenir le mot de passe a partir du pseudo utiliser dans connexion.ctrl.php
     $adherents= $this->db->query("SELECT motdepasse FROM adherent WHERE  pseudo='$pseudo'" );
     $res=$adherents->fetchAll( PDO::FETCH_CLASS[0]);
     return $res;
   }
-  function exist($pseudo){
+  function exist($pseudo){ //permet de verifier si le pseudo existe ou non
     $adherents= $this->db->query("SELECT pseudo FROM adherent WHERE  pseudo='$pseudo'" );
     $res=$adherents->fetchAll( PDO::FETCH_CLASS[0]);
     if (count($res)>0) {
@@ -39,62 +39,18 @@ class AdherentDAO{
     }else {
       return false;
     }
-
-
   }
-  function CreeAdherent($pseudo,$nom,$prenom,$email,$motdepasse){
+  function CreeAdherent($pseudo,$nom,$prenom,$email,$motdepasse){ //permet de cree un objet adherent et de l'ajouter dans la base de données
     $adherents= $this->db->query("SELECT id FROM adherent ORDER BY id DESC LIMIT 1" );
-
     $id=$adherents->fetchAll( PDO::FETCH_CLASS[0]);
+    $id=$id[0][0] +1; //creation de sont identifiant unique
 
-    $id=$id[0][0];
-    var_dump($id);
-    $query="INSERT INTO adherent (id, pseudo,nom,prenom,email,motdepasse) VALUES ($id+1, $pseudo,$nom,$prenom,$email,$motdepasse)";
-    $adherent= $this->db->exec($query); //marche pas
-    var_dump($adherent);
-    return $adherent;
+    $query="INSERT INTO adherent (id, pseudo,nom,prenom,email,motdepasse) VALUES ($id, '$pseudo','$nom','$prenom','$email','$motdepasse')";
+    $qry = $this->db->prepare($query)->execute();
+
+    return $qry;
   }
 }
 
-
-
-/* $query = "INSERT INTO students (name, email) VALUES ('$name', '$email')";
-13
-
-14
-    // Executes the query
-15
-    // If data inserted then set success message otherwise set error message
-16
-    if( $db->exec($query) ){
-17
-        $message = "Data inserted successfully.";
-18
-    }else{
-19
-        $message = "Sorry, Data is not inserted.";
-
-
-
-
-        $query = "UPDATE students set name='$name', email='$email' WHERE rowid=$id";
-       17
-
-       18
-           // Executes the query
-       19
-           // If data inserted then set success message otherwise set error message
-       20
-           // Here $db comes from "db_connect.php"
-       21
-           if( $db->exec($query) ){
-       22
-               $message = "Data is updated successfully.";
-       23
-           }else{
-       24
-               $message = "Sorry, Data is not updated.";
-       25
-           }
-*/
+      /*  $query = "UPDATE students set name='$name', email='$email' WHERE rowid=$id"; */
  ?>

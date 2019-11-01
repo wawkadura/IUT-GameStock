@@ -7,10 +7,6 @@
     <title>GameStock.com</title>
   </head>
   <body>
-
-
-
-
   <div id="hautpage">
       <div class="titre">
           <a href="../controler/main.ctrl.php?onglet=Acceuil" id="logo"> <img src="../model/data/icons/logo2.png" align="left"/></a>
@@ -39,6 +35,7 @@
         $description= $jeu[4];
         $plateforme= $jeu[6];
         $categorie= $jeu[5];
+
           echo "<h1>$titre</h1>";
           echo "<a href=\"../controler/jeu.ctrl.php?id=$jeu[0]\"><img src=$chemin/$image[1] alt=\"\" width=\"440px\" height=\"500px\"> <p id=\"prix\">$jeu[2]€</p> </a>";
 
@@ -52,21 +49,32 @@
           echo "</fieldset>";
 
           if (isset($listcom)) {
-          foreach ($listcom as $value) {
-            $pseudo = $value[0];
-            $dateAjout = $value[1];
-            $message = $value[2];
-            $note = $value[3];
-            $numJeu = $value[4];
+            foreach ($listcom as $value) {
+              $pseudo = $value[0];
+              $dateAjout = $value[1];
+              $message = $value[2];
+              $note = $value[3];
+              $numJeu = $value[4];
 
-            echo "<fieldset class=\"commentaire\">";
-            echo "<legend class=\"commentaireTitre\">Commentaire de $pseudo</legend>";
-            echo "<h5>$dateAjout<h5>";
-            echo "<h5>$message<h5>";
-            echo "</fieldset>";
+              echo "<fieldset class=\"commentaire\">";
+              echo "<legend class=\"commentaireTitre\">Commentaire de $pseudo</legend>";
+              echo "<h5>$dateAjout<h5>";
+              echo "<h5>$message<h5>";
+              echo "</fieldset>";
+            }
           }
-        }
        ?>
+       <fieldset class="message">
+       <form action="jeu.ctrl.php?commentaire=1" method="POST">
+           <label><b>pseudo</b></label>
+           <input type="text" placeholder="Entrer votre pseudo" name="username" required>
+           <br>
+           <label><b>Message : </b></label>
+           <textarea cols="50" rows="2">Zone de texte!</textarea>
+           <input type="submit" id='submit' value='submit' >
+
+       </form>
+       </fieldset>
     </fieldset>
 
 

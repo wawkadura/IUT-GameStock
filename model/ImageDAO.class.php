@@ -11,7 +11,7 @@ class ImageDAO{
       die("erreur de connexion:".$e->getMessage());
   }
 }
-  function getAll(){
+  function getAll(){ //avoir la list de tous les objets Image dans la base de données
     $images= $this->db->query("SELECT * FROM image");
     $res=$images->fetchAll( PDO::FETCH_CLASS[0]);
     return $res;

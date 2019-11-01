@@ -31,7 +31,7 @@
         <li><a class="plateforme" href="../controler/main.ctrl.php?onglet=Xbox">Xbox</a></li>
         <!-- <li class="dropdown"><a href="#">Mon compte</a>
             <ul class="dropdown-child"> -->
-        <li><a class="compte" href="../controler/connexion.ctrl.php">Se connecter</a></li>
+      <!--   <li><a class="compte" href="../controler/connexion.ctrl.php">Se connecter</a></li>
         <li><a class="compte" href="../controler/inscription.ctrl.php">S'inscrire</a></li>
             <!-- </ul>
         </li> -->

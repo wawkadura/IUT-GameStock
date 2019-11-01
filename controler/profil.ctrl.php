@@ -13,7 +13,8 @@ $adherents = new AdherentDAO($config['database']);
 $commentaires = new CommentaireDAO($config['database']);
 
 $profil=$adherents->getAdherent($id);
-$listcom=$commentaires->getCommentairesAdherent($profil[1]);
+$listcom=$commentaires->getCommentairesAdherent($profil['pseudo']);
+
 if (isset($profil) && isset($listcom)) {
   include('../view/profil.view.php');
 }

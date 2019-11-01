@@ -11,7 +11,7 @@ class CommentaireDAO{
       die("erreur de connexion:".$e->getMessage());
   }
 }
-  function getAll(){
+  function getAll(){ //avoir la list de tous les objets Commentaire dans la base de données
     $comm= $this->db->query("SELECT * FROM commentaire");
     $res=$comm->fetchAll( PDO::FETCH_CLASS[0]);
     return $res;
@@ -25,6 +25,13 @@ class CommentaireDAO{
     $comm= $this->db->query("SELECT * FROM commentaire WHERE pseudo='$pseudo' ");
     $res=$comm->fetchAll( PDO::FETCH_CLASS[0]);
     return $res;
+  }
+  function CreeCommentaire($pseudo,$message,$note,$numjeu){ //permet de cree un objet commentaire et de l'ajouter dans la base de données
+
+    $query="INSERT INTO commentaire (pseudo, dateAjoute,message,note,numJeu) VALUES ('$pseudo','$date','$message','$note','$numjeu')";
+    $qry = $this->db->prepare($query)->execute();
+
+    return $qry;
   }
 
 

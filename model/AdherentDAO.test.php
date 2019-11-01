@@ -12,6 +12,6 @@
 
   $m=$adherent->getAdherent(2);
   var_dump($m);
-  $adherent->AjouterAdherent(11,'walidi','amine','asci','walidi.ascii@yahoo.com','waw');
-
+  //$m=$adherent->CreeAdherent('jackie','jackie','j','jackie.j@yahoo.com','j');
+  var_dump($m);
  ?>

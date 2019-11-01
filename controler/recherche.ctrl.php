@@ -1,5 +1,4 @@
 <?php
-if (isset($_GET['cherche']) ) {
   $recherche=$_GET['cherche'];
   //$attr=explode( ' ', $recherche );
 
@@ -11,12 +10,9 @@ if (isset($_GET['cherche']) ) {
   $jeux = new JeuDAO($config['database']);
   $images = new ImageDAO($config['database']);
   $jeu=$jeux->getRecherche($recherche);
+
   if (isset($jeu)&& isset($images) && isset($chemin)) {
     include('../view/recherche.view.php');
   }
-
-}else {
-  header('Location: ../controler/main.ctrl.php');
-}
 
  ?>

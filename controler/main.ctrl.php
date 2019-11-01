@@ -20,16 +20,21 @@
     $id=$_GET['connecter'];
     $adherents = new AdherentDAO($config['database']);
     $connecter=$adherents->getAdherent($id);
-
   }
 
   if ($onglet=='Acceuil') { //pour l'affichage du bon onglet
-    var_dump($onglet);
-    $list= $jeux->getAll();
-
+    if(isset($_GET['Trier'])){
+      $list= $jeux->getAllSorted($_GET['Trier']);
+    }else {
+      $list= $jeux->getAll();
+    }
   }
   else {
-    $list=$jeux->getJeuxPlatforme($onglet);
+    if(isset($_GET['Trier'])){ //pour le triage
+      $list=$jeux->getJeuxPlatformeSorted($onglet,$_GET['Trier']);
+    }else {
+      $list=$jeux->getJeuxPlatforme($onglet);
+    }
   }
 
   if (isset($list) && isset($images) && isset($chemin)) {

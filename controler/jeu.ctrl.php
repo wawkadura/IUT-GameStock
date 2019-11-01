@@ -17,7 +17,6 @@ $commentaires = new CommentaireDAO($config['database']);
 
 $jeu=$jeux->getJeux($id);
 $listcom=$commentaires->getCommentaires($id);
-//var_dump($listcom);
 
 if (isset($jeu) && isset($images) && isset($chemin) && isset($listcom)) {
   include('../view/jeu.view.php');
