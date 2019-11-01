@@ -26,9 +26,8 @@ class CommentaireDAO{
     $res=$comm->fetchAll( PDO::FETCH_CLASS[0]);
     return $res;
   }
-  function CreeCommentaire($pseudo,$message,$note,$numjeu){ //permet de cree un objet commentaire et de l'ajouter dans la base de données
-
-    $query="INSERT INTO commentaire (pseudo, dateAjoute,message,note,numJeu) VALUES ('$pseudo','$date','$message','$note','$numjeu')";
+  function CreeCommentaire($pseudo,$message,$numjeu){ //permet de cree un objet commentaire et de l'ajouter dans la base de données
+    $query="INSERT INTO commentaire (pseudo, dateAjoute,message,note,numJeu) VALUES ('$pseudo',CURRENT_DATE,'$message',1,'$numjeu')";
     $qry = $this->db->prepare($query)->execute();
 
     return $qry;

@@ -66,15 +66,18 @@
        ?>
        <fieldset class="message">
        <form action="jeu.ctrl.php?commentaire=1" method="POST">
-           <label><b>pseudo</b></label>
-           <input type="text" placeholder="Entrer votre pseudo" name="username" required>
+           <label><b>pseudo : </b></label>
+           <input type="text" placeholder="Entrer votre pseudo" name="pseudo" required>
            <br>
            <label><b>Message : </b></label>
-           <textarea cols="50" rows="2">Zone de texte!</textarea>
+           <textarea cols="50" rows="2" name="message" required></textarea>
+           <br>
            <input type="submit" id='submit' value='submit' >
 
        </form>
        </fieldset>
+
+
     </fieldset>
 
 

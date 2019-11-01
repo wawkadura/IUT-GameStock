@@ -25,9 +25,8 @@ motdepasse VARCHAR(50)
 
 CREATE TABLE commentaire(
 pseudo VARCHAR(10),
-dateAjoute DATE ,
+dateAjoute DATE,
 message VARCHAR(255),
-note INTEGER(10),
 numJeu INTEGER(10),
 PRIMARY KEY(pseudo,dateAjoute),
 FOREIGN KEY(numJeu) REFERENCES jeu(numJeu),

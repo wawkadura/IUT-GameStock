@@ -246,9 +246,11 @@ h1{
 }
 .message{
   text-align: left;
+  color: black;
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: white;
   font-size: 35px;
+
 }
 
 h2,h3{

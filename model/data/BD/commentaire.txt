@@ -1,10 +1,10 @@
-waw|15/5/2019|super jeux, je recommande fortement|4|1
-waw|18/10/2019|Excellent|5|2
-amine|02/5/2019|Ca marche super bien. Un peu de temps pour comprendre comment marche battle.net mais sinon code reçu très rapidement et avec des explications claires. Imbattable au niveau du prix, on ne trouve pas plus concurentiel. Bravo Gamestock|5|3
-amine|11/12/2018|je recommande ce jeu|3|4
-cesar|14/5/2019|Excellent jeu|4|5
-waw|19/10/2018|Parfait, le jeu est fonctionnel|5|6
-waw|19/10/2019|Service attendu Parfait|4|7
-cesar|18/10/2019|Decu,je ne recommande pas ce jeu|1|8
-david|20/10/2019|Impeccable|4|9
-gabrielle|27/9/219|nickel et rapide rien à dire|5|10
+waw|2019-10-11|super jeux, je recommande fortement|1
+waw|2019-9-21|Excellent|2
+amine|2019-06-15|Imbattable au niveau du prix, on ne trouve pas plus concurentiel. Bravo Gamestock|3
+amine|2018-10-01|je recommande ce jeu|4
+cesar|2019-09-06|Excellent jeu|5
+waw|2019-07-01|Parfait, le jeu est fonctionnel|6
+waw|2018-11-01|Service attendu Parfait|7
+cesar|2019-10-08|Decu,je ne recommande pas ce jeu|8
+david|2019-10-20|Impeccable|9
+gabrielle|2019-09-27|nickel et rapide rien à dire|10
