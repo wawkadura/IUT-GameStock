@@ -40,7 +40,6 @@
         $plateforme= $jeu[6];
         $categorie= $jeu[5];
           echo "<h1>$titre</h1>";
-        //$listcom : list des commentaitres
           echo "<a href=\"../controler/jeu.ctrl.php?id=$jeu[0]\"><img src=$chemin/$image[1] alt=\"\" width=\"440px\" height=\"500px\"> <p id=\"prix\">$jeu[2]€</p> </a>";
 
           echo "<h2> Date de sortie : $dateSortie</h2>";
@@ -48,10 +47,25 @@
           echo "<h2> Catégorie : $categorie</h2>";
 
           echo "<fieldset class=\"description\">";
-          echo "<legend>Description</legend>";
+          echo "<legend class=\"descriptionTitre\">Description</legend>";
           echo "<h4>$description<h4>";
-
           echo "</fieldset>";
+
+          if (isset($listcom)) {
+          foreach ($listcom as $value) {
+            $pseudo = $value[0];
+            $dateAjout = $value[1];
+            $message = $value[2];
+            $note = $value[3];
+            $numJeu = $value[4];
+
+            echo "<fieldset class=\"commentaire\">";
+            echo "<legend class=\"commentaireTitre\">Commentaire de $pseudo</legend>";
+            echo "<h5>$dateAjout<h5>";
+            echo "<h5>$message<h5>";
+            echo "</fieldset>";
+          }
+        }
        ?>
     </fieldset>
 

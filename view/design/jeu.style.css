@@ -212,18 +212,37 @@ h1{
 }
 
 .description{
-  text-align: right;
   background: rgba(255, 255, 255, .4);
   position: relative;
   font-size: 20px;
   top: -380px;
 }
 
-legend{
+.commentaire{
+  background: rgba(0, 255, 0, .4);
+  position: relative;
+  font-size: 20px;
+  top: -300px;
+}
+
+.descriptionTitre{
   text-align: left;
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: white;
   font-size: 35px;
+}
+
+.commentaireTitre{
+  text-align: left;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: lime;
+  font-size: 20px;
+}
+
+.com{
+  position: relative;
+  text-align: left;
+  top: -300px;
 }
 
 h2,h3{
