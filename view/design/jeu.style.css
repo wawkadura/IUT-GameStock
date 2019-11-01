@@ -1,0 +1,337 @@
+html{
+   font: 1.1em sans-serif;
+
+}
+
+body{
+  background-image:url("../../model/data/icons/fondecran.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#hautpage {
+    text-align: right;
+    opacity: 1;
+}
+
+#hautpage .titre {
+   height: 88px;
+}
+
+.titre{
+   width: 1036px;
+   margin: 0 auto;
+   position: relative;
+}
+
+#logo {
+    width: 243px;
+    height: 63px;
+    background:
+    background-size: auto;
+    background-size: 100%;
+    cursor: pointer;
+    margin-top: 13px;
+    position: absolute;
+    left: 0;
+    transition: all .2s;
+}
+
+a {
+    color: #ff5400;
+    text-decoration: none;
+    outline: 0;
+}
+
+#rechercher{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 24px;
+}
+
+#boiterecherche{
+    height: 30px;
+    background: 0 0;
+    color: lime;
+    border: 0;
+    border-bottom-color: lime;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-bottom: 2px solid lime;
+    outline: 0;
+    font-size: 24px;
+    width: 220px;
+    border-radius: 0;
+    position: relative;
+    top: -5px;
+    transition-duration: 300ms;
+    -moz-transition-duration: 300ms;
+    -webkit-transition-duration: 300ms;
+}
+
+#boiterecherche:hover{
+  height: 38px;
+  background: 0 0;
+  color: lime;
+  border: 0;
+  border-bottom-color: lime;
+  border-bottom-style: none;
+  border-bottom-width: 0px;
+  border-bottom: 2px solid lime;
+  outline: 0;
+  font-size: 24px;
+  width: 234px;
+  border-radius: 0;
+  position: relative;
+  top: -1px;
+  transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -webkit-transition-duration: 300ms;
+}
+
+#boutonrecherche{
+    width: 45px;
+    height: 45px;
+    background: url("../../model/data/icons/loupe.png") 15px 14px no-repeat;
+    background-size: auto;
+    background-size: 23px;
+    border: 0;
+    color:lime;
+    font-weight: 700;
+    cursor: pointer;
+    -moz-border-radius: 0 5px 5px 0;
+    -webkit-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
+    text-shadow: 1px 1px lime;
+    font-size: 10px;
+    vertical-align: bottom;
+    transition-duration: 300ms;
+    -moz-transition-duration: 300ms;
+    -webkit-transition-duration: 300ms;
+}
+
+#boutonrecherche:hover{
+  width: 50px;
+  height: 50px;
+  background: url("data/loupe.png") 21px 20px no-repeat;
+  background-size: auto;
+  background-size: 23px;
+  border: 0;
+  color:lime;
+  font-weight: 700;
+  cursor: pointer;
+  -moz-border-radius: 0 5px 5px 0;
+  -webkit-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+  text-shadow: 1px 1px lime;
+  font-size: 10px;
+  vertical-align: bottom;
+  transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -webkit-transition-duration: 300ms;
+}
+
+#textseconnecter, #textsinscrire{
+    color: lime;
+    font-size: 20px;
+    font-family: Arial Black;
+
+}
+
+#textseconnecter:hover{
+    color: lime;
+    font-size: 22px;
+    font-family: Arial Black;
+
+}
+
+#textsinscrire:hover{
+    color: lime;
+    font-size: 22px;
+    font-family: Arial Black;
+
+}
+
+h1{
+  text-align: center;
+  font-size: 400%;
+  color: black;
+  font-style: oblique;
+  font-family: fantasy;
+  /* font-variant: small-caps; */
+  font-weight: bold;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+#milieupage{
+  text-align: left;
+}
+
+#milieupage a{
+  display: inline-block;
+  margin: 4%;
+}
+
+#milieupage img{
+  transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -webkit-transition-duration: 300ms;
+}
+
+#milieupage p{
+  font-size: 300%;
+  text-align: center;
+  color: black;
+  font-style: oblique;
+  font-family: fantasy;
+  /* font-variant: small-caps; */
+  font-weight: bold;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: white;
+  /* -webkit-box-reflect: below 0 linear-gradient(transparent,white); */
+}
+#prix{
+  font-size: 10%;
+  text-align: center;
+  color: blue;
+  font-style: oblique;
+  font-family: fantasy;
+  /* font-variant: small-caps; */
+  font-weight: bold;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: blue;
+  /* -webkit-box-reflect: below 0 linear-gradient(transparent,white); */
+
+}
+
+.jeu{
+  background: rgba(0, 0, 0, .5);
+  border-color: lime;
+  margin-bottom: auto;
+}
+
+.description{
+  text-align: right;
+  background: rgba(255, 255, 255, .4);
+  position: relative;
+  font-size: 20px;
+  top: -400px;
+}
+
+h2,h3{
+  text-align: center;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: white;
+  position: relative;
+  top : -700px;
+  left: 300px;
+  font-size: 50px;
+}
+
+input{
+    font-family: proxima-nova,arial,sans-serif;
+}
+
+
+
+
+
+nav ul{
+    display: table;
+    width: 1400px;
+    margin: 100px auto;
+    padding: 0;
+}
+
+nav ul li{
+    display: table-cell;
+}
+
+nav ul{
+    background: rgba(0,255,0,0) ;
+}
+
+nav ul{
+    border-radius: 3px;
+
+}
+
+nav ul li a{
+    display: block;
+    text-align: center;
+    color: rgba(0, 255, 0, .9);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 8px 17px 8px;
+}
+
+nav ul li a{
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .1);
+}
+
+nav ul li:first-child a{
+    border-radius: 3px 0 0 3px;
+}
+
+nav ul li:last-child a{
+    border-radius: 0 3px 3px 0;
+}
+
+
+
+nav ul li a:hover,
+nav ul li a:focus{
+    padding: 8px 25px 17px 25px;
+}
+
+nav ul li a{
+    transition: padding .3s;
+}
+
+nav ul li a{
+    transition: all .3s;
+}
+
+nav ul li a{
+    transition: all .3s .1s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus{
+    transition: all .3s 0s;
+}
+
+nav ul li a{
+    position: relative;
+}
+
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 9px;
+    margin-left: -2px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+}
+
+nav ul li a:hover::before,
+nav ul li a:focus::before{
+    background: white;
+}
+
+.compte {
+  color: black;
+  background: rgba(255, 255, 255, .3);
+}
+
+.compte:hover::before {
+  background: lime;
+}
+
+.plateforme {
+  color: lime;
+  background: rgba(0, 0, 0, .5);
+}
