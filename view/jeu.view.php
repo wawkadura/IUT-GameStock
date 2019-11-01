@@ -53,8 +53,8 @@
               $pseudo = $value[0];
               $dateAjout = $value[1];
               $message = $value[2];
-              $note = $value[3];
-              $numJeu = $value[4];
+              //$note = $value[3];
+              //$numJeu = $value[4];
 
               echo "<fieldset class=\"commentaire\">";
               echo "<legend class=\"commentaireTitre\">Commentaire de $pseudo</legend>";
