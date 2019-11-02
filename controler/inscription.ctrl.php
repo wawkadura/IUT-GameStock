@@ -9,5 +9,7 @@
   }
     include('../view/inscription.view.php');
 
+
+
   ?>
 ?>

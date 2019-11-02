@@ -13,7 +13,7 @@
 
   $config = parse_ini_file('../config/config.ini');
   $chemin=$config['ImagesCover'];
-
+  
   $jeux = new JeuDAO($config['database']);
   $images = new ImageDAO($config['database']);
   $commentaires = new CommentaireDAO($config['database']);
