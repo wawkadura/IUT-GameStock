@@ -7,34 +7,26 @@
     <title>GameStock.com</title>
   </head>
   <body>
+    <div id="hautpage">
+        <div class="titre">
+            <a href="../controler/main.ctrl.php?onglet=Acceuil&connecter=<?=$profil[0]?>" id="logo"> <img src="../model/data/icons/logo2.png" align="left"/></a>
+            <form id="rechercher" action="recherche.ctrl.php" method="GET">
+                <input id="boiterecherche" type="text" name="cherche">
+                <input id="boutonrecherche" type="submit" value="">
+            </form>
+        </div>
+        <nav class="onglets">
+          <ul>
 
+          <li><a class="plateforme" href="../controler/main.ctrl.php?onglet=Acceuil&connecter=<?=$profil[0]?>">Retour à la page d'acceuil</a></li>
+        </nav>
+    </div>
 
+    <div id="milieupage">
+    </div>
 
-
-  <div id="hautpage">
-      <div class="titre">
-          <a href="../controler/main.ctrl.php?onglet=Acceuil&connecter=<?=$profil[0]?>" id="logo"> <img src="../model/data/icons/logo2.png" align="left"/></a>
-          <form id="rechercher" action="recherche.ctrl.php" method="GET">
-              <input id="boiterecherche" type="text" name="cherche">
-              <input id="boutonrecherche" type="submit" value="">
-          </form>
-      </div>
-      <nav class="onglets">
-        <ul>
-        <!--  <li><a href="../controler/main.ctrl.php?onglet=EpicGames">Epic Games</a></li>-->
-        <!--  <li><a href="../controler/main.ctrl.php?onglet=Battle.net">Battle.net</a></li>-->
-        <!--  <li><a href="../controler/main.ctrl.php?onglet=GOG.com">GOG.com</a></li> -->
-        <li><a class="plateforme" href="../controler/main.ctrl.php?onglet=Acceuil&connecter=<?=$profil[0]?>">Retour à la page d'acceuil</a></li>
-      </nav>
-  </div>
-
-  <div id="milieupage">
-
-  </div>
-
-  <div id="baspage">
-
-  </div>
+    <div id="baspage">
+    </div>
 
   </body>
 </html>

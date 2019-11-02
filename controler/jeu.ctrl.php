@@ -1,38 +1,43 @@
 <?php
-if (isset($_GET['id'])) {
-  $id=$_GET['id'];
-}else {
-  $id='1';
-}
-require_once('../model/JeuDAO.class.php');
-require_once('../model/ImageDAO.class.php');
-require_once('../model/CommentaireDAO.class.php');
-require_once('../model/AdherentDAO.class.php');
-
-$config = parse_ini_file('../config/config.ini');
-$chemin=$config['ImagesCover'];
-
-$jeux = new JeuDAO($config['database']);
-$images = new ImageDAO($config['database']);
-$commentaires = new CommentaireDAO($config['database']);
-$adherents = new AdherentDAO($config['database']);
-
-if (isset($_GET['commentaire'])) {
-  $pseudo=$_POST['pseudo'];
-  $message = $_POST['message'];
-  if ($adherents->exist($pseudo)) {
-    $valider=$commentaires->CreeCommentaire($pseudo,$message,$id);
+  if (isset($_GET['id'])) {
+    $idJeu=$_GET['id'];
   }else {
-    var_dump($pseudo);
+    $idJeu='1';
   }
-}
 
-$jeu=$jeux->getJeux($id);
-$listcom=$commentaires->getCommentaires($id);
 
-if (isset($jeu) && isset($images) && isset($chemin) && isset($listcom)) {
-  include('../view/jeu.view.php');
-}
+  require_once('../model/JeuDAO.class.php');
+  require_once('../model/ImageDAO.class.php');
+  require_once('../model/CommentaireDAO.class.php');
+  require_once('../model/AdherentDAO.class.php');
+
+  $config = parse_ini_file('../config/config.ini');
+  $chemin=$config['ImagesCover'];
+
+  $jeux = new JeuDAO($config['database']);
+  $images = new ImageDAO($config['database']);
+  $commentaires = new CommentaireDAO($config['database']);
+  $adherents = new AdherentDAO($config['database']);
+
+  if (isset($_GET['connecter'])) {
+      $erreur="";
+      $idAdherent=$_GET['connecter'];
+    if (isset($_GET['commentaire'])) {
+      $adh=$adherents->getAdherent($idAdherent);
+      $message = $_POST['message'];
+      $valider=$commentaires->CreeCommentaire($adh['pseudo'],$message,$idJeu);
+
+    }
+  }else {
+    $erreur="Il faut vous connecter pour pouvoir poster un commentaire ";
+  }
+
+  $jeu=$jeux->getJeux($idJeu);
+  $listcom=$commentaires->getCommentaires($idJeu);
+
+  if (isset($jeu) && isset($images) && isset($chemin) && isset($listcom)) {
+    include('../view/jeu.view.php');
+  }
 
 
 

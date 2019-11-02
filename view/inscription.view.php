@@ -7,7 +7,6 @@
   </head>
   <body>
         <div id="container">
-            <!-- zone de connexion -->
 
             <form action="verif.ctrl.php?verif=inscription" method="POST">
                 <img src="../model/data/icons/logo2.png" />

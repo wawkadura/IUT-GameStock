@@ -28,7 +28,7 @@ pseudo VARCHAR(10),
 dateAjoute DATE,
 message VARCHAR(255),
 numJeu INTEGER(10),
-PRIMARY KEY(pseudo,dateAjoute),
+PRIMARY KEY(pseudo,message),
 FOREIGN KEY(numJeu) REFERENCES jeu(numJeu),
 FOREIGN KEY(pseudo) REFERENCES adherent(pseudo)
 );
