@@ -391,3 +391,34 @@ text-transform:inherit;
 #triage li:hover a, #triage li li:hover a{
 color:#000;
 }
+
+#milieupage h1{
+  text-align: center;
+  font-size: 350%;
+  color: red;
+  font-style: oblique;
+  font-family: fantasy;
+  /* font-variant: small-caps; */
+  font-weight: bold;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+h2{
+  text-align: center;
+  font-size: 250%;
+  color: black;
+  font-style: oblique;
+  font-family: fantasy;
+  /* font-variant: small-caps; */
+  font-weight: bold;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+fieldset{
+  position: relative;
+  border-color: lime;
+  background-color: rgba(0, 0, 0, .5);
+  top: 100px;
+}

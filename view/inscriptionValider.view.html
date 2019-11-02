@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="../view/design/main.style.css">
+    <link rel="icon" type="image/png" href="../model/data/icons/logo1.png" />
+    <title>GameStock.com</title>
   </head>
   <body>
+
+    <div id="hautpage">
+        <div class="titre">
+            <a href="../controler/main.ctrl.php?onglet=Acceuil<?=$param ?>" id="logo"> <img src="../model/data/icons/logo2.png" align="left"/></a>
+        </div>
+    </div>
+
+    <div id="milieupage">
+      <fieldset>
+        <h1>Félicitations !</h1>
+        <h2>Vous faites désormais partie de la team GameStock.com et nous vous en remercions. <br> <br>
+          Retournez à la page d'accueil pour accéder à votre compte, en cliquant sur le bouton ci-dessous.
+        </h2>
+      </fieldset>
+
+      <nav class="onglets">
+        <ul>
+        <li><a class="plateforme" href="../controler/main.ctrl.php?<?=$param ?>">Retour à la page d'acceuil</a></li>
+      </nav>
+    </div>
+    <div id="baspage">
+
+    </div>
+
+
+
+
 
   </body>
 </html>
