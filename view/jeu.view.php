@@ -48,7 +48,7 @@
           echo "<h4>$description<h4>";
           echo "</fieldset>";
 
-          if (isset($listcom)) {
+          if ($listcom!=null) {
             foreach ($listcom as $value) {
               $pseudo = $value[0];
               $dateAjout = $value[1];
@@ -61,15 +61,22 @@
               echo "<h5>$dateAjout<h5>";
               echo "<h5>$message<h5>";
               echo "</fieldset>";
-            }
+              }
+          } else {
+            echo "<fieldset class=\"commentaire\">";
+            echo "<legend class=\"commentaireTitre\">L'équipe GameStock</legend>";
+            echo "<h4>Il n'y a actuellement aucun commentaire pour ce jeu ! </br>
+            Soyez le premier à en écrire un juste en dessous. Votre avis nous intéresse ;)</h4>";
+            echo "</fieldset>";
           }
        ?>
        <fieldset class="message">
+         <legend class=\"commentaireTitre\">Poster un commentaire pour <?=$titre?></legend>
        <form action="jeu.ctrl.php?commentaire=1" method="POST">
-           <label><b>pseudo : </b></label>
-           <input id="psd" type="text" placeholder="Entrer votre pseudo" name="pseudo" required>
+           <label><b>Pseudo :  </b></label>
+           <input id="psd" type="text" placeholder="Entrez votre pseudo" name="pseudo" required>
            <br>
-           <label><b>Message : </b></label>
+           <label><b>Commentaire :  </b></label>
            <textarea cols="50" rows="2" name="message" required></textarea>
            <br>
            <input type="submit" id='sbt' value='Poster' >
