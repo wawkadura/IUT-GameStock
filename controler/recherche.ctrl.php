@@ -14,8 +14,6 @@
   if ($_GET['connecter']) {
     $connecter=$_GET['connecter'];
   }
-
-
   if (isset($jeu)&& isset($images) && isset($chemin)) {
     include('../view/recherche.view.php');
   }

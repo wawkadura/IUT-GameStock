@@ -18,9 +18,6 @@
       </div>
       <nav class="onglets">
         <ul>
-        <!--  <li><a href="../controler/main.ctrl.php?onglet=EpicGames">Epic Games</a></li>-->
-        <!--  <li><a href="../controler/main.ctrl.php?onglet=Battle.net">Battle.net</a></li>-->
-        <!--  <li><a href="../controler/main.ctrl.php?onglet=GOG.com">GOG.com</a></li> -->
         <li><a class="plateforme" href="../controler/main.ctrl.php?onglet=Acceuil&connecter=<?=$profil[0]?>">Retour à la page d'acceuil</a></li>
       </nav>
   </div>

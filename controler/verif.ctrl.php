@@ -39,7 +39,7 @@
       if ($MDP==$confirmationMDP) { // verification que les mots de passes correspondents
         $valider=$adherents->CreeAdherent($pseudo,$nom,$prenom,$email,$MDP);
         if ($valider) {
-          header('Location: inscriptionValider.view.html');
+          header('Location: ../view/inscriptionValider.view.html');
         }else {
           header('Location: inscription.ctrl.php?erreur=L\'inscription a ECHOUE desole!');
         }
