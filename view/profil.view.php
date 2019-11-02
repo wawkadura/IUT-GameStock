@@ -8,13 +8,10 @@
   </head>
   <body>
 
-
-
-
   <div id="hautpage">
       <div class="titre">
           <a href="../controler/main.ctrl.php?onglet=Acceuil&connecter=<?=$profil[0]?>" id="logo"> <img src="../model/data/icons/logo2.png" align="left"/></a>
-          <form id="rechercher" action="recherche.ctrl.php" method="GET">
+          <form id="rechercher" action="recherche.ctrl.php?connecter=<?=$profil[0]?>" method="POST">
               <input id="boiterecherche" type="text" name="cherche">
               <input id="boutonrecherche" type="submit" value="">
           </form>
@@ -31,24 +28,22 @@
   <div id="milieupage">
     <fieldset class="jeu">
       <?php
-        echo "<h1>Profil de $profil[1]</h1>";
+        echo "<h1>Profil de $profil['pseudo']</h1>";
         echo "<a href=\"../controler/profil.ctrl.php?id=$profil[0]\"><img src=\"../model/data/icons/user.png\" alt=\"\" width=\"440px\" height=\"440px\"> <p id=\"prix\">$profil[1] $profil[2]</p> </a>";
-        echo "<h2> Prénom : $profil[1]</h2>";
-        echo "<h2> Nom : $profil[2]</h2>";
-        echo "<h2> Email : $profil[4]</h2>";
-        echo "<h2> Pseudo : $profil[3]</h2>";
-        echo "<h2> Mot de passe : $profil[5]</h2>";
+        echo "<h2> Prénom : $profil['prenom']</h2>";
+        echo "<h2> Nom : $profil['nom']</h2>";
+        echo "<h2> Email : $profil['email']</h2>";
 
 
 
         if ($listcom!=null) {
           foreach ($listcom as $value) {
-            $pseudo = $value[0];
-            $dateAjout = $value[1];
-            $message = $value[2];
-            $numJeu = $value[3];
+            $pseudo = $value['pseudo'];
+            $dateAjout = $value['dateAjoute'];
+            $message = $value['message'];
+            $numJeu = $value['numJeu'];
             $jeu=$jeux->getJeux($numJeu);
-            $titre = $jeu[1];
+            $titre = $jeu['titre'];
 
             echo "<fieldset class=\"commentaire\">";
             echo "<legend class=\"commentaireTitre\">Votre commentaire pour $titre: </legend>";

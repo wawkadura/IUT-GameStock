@@ -11,7 +11,9 @@
   $jeux = new JeuDAO($config['database']);
   $images = new ImageDAO($config['database']);
   $jeu=$jeux->getRecherche($recherche);
-  $connecter=$_GET['connecter'];
+  if ($_GET['connecter']) {
+    $connecter=$_GET['connecter'];
+  }
 
 
   if (isset($jeu)&& isset($images) && isset($chemin)) {
