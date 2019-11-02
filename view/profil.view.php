@@ -26,7 +26,7 @@
     <fieldset class="jeu">
       <?php
         echo "<h1>Profil de $profil[1]</h1>";
-        echo "<a href=\"../controler/profil.ctrl.php?id=$profil[0]\"><img src=\"../model/data/icons/user.png\" alt=\"\" width=\"440px\" height=\"440px\"> <p id=\"prix\">$profil[1] $profil[2]</p> </a>";
+        echo "<a href=\"../controler/profil.ctrl.php?id=$profil[0]\"><img src=\"../model/data/icons/user.png\" alt=\"\" width=\"440px\" height=\"440px\"> <p id=\"prix\">$profil[3] $profil[2]</p> </a>";
         echo "<h2> Prénom : $profil[3]</h2>";
         echo "<h2> Nom : $profil[2]</h2>";
         echo "<h2> Email : $profil[4]</h2>";
