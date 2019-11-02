@@ -25,11 +25,11 @@
   <div id="milieupage">
     <fieldset class="jeu">
       <?php
-        echo "<h1>Profil de $profil['pseudo']</h1>";
+        echo "<h1>Profil de $profil[1]</h1>";
         echo "<a href=\"../controler/profil.ctrl.php?id=$profil[0]\"><img src=\"../model/data/icons/user.png\" alt=\"\" width=\"440px\" height=\"440px\"> <p id=\"prix\">$profil[1] $profil[2]</p> </a>";
-        echo "<h2> Prénom : $profil['prenom']</h2>";
-        echo "<h2> Nom : $profil['nom']</h2>";
-        echo "<h2> Email : $profil['email']</h2>";
+        echo "<h2> Prénom : $profil[2]</h2>";
+        echo "<h2> Nom : $profil[3]</h2>";
+        echo "<h2> Email : $profil[4]</h2>";
 
 
 

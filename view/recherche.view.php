@@ -9,7 +9,7 @@
   <body>
     <?php
       if (isset($connecter)) {
-        $param="&connecter=$connecter[0]"; // pour passer l'identifiant de l'adherent aux autres view
+        $param="&connecter=$connecter"; // pour passer l'identifiant de l'adherent aux autres view
       }else {
         $param="";
       }
